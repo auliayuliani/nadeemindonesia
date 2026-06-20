@@ -1,0 +1,2066 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #ffffff;
+    padding-top: 120px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hover global agar efek scale/angkat tetap bekerja di seluruh halaman */
+a, button, .produk-card, .program-card, .testimonial-card, .point-item,
+.filter-btn, .faq-option-btn, .btn-selengkapnya, .btn-bergabung,
+.btn-kirim, .btn-wa, .btn-mulai, .btn-reset, .faq-fab,
+.social-icons a, .sosmed-icons a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+                color 0.3s ease, background-color 0.3s ease,
+                border-color 0.3s ease !important;
+}
+
+a:hover, button:hover, .produk-card:hover, .program-card:hover,
+.testimonial-card:hover, .point-item:hover, .filter-btn:hover,
+.faq-option-btn:hover, .btn-selengkapnya:hover, .btn-bergabung:hover,
+.btn-kirim:hover, .btn-wa:hover, .btn-mulai:hover, .btn-reset:hover,
+.faq-fab:hover, .social-icons a:hover, .sosmed-icons a:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+}
+
+/* Navbar Style */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    flex-shrink: 0;
+    margin-left: -400px;
+}
+
+.logo img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: -200px;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #423216;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    font-weight: 700;
+    color: #b5935a;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-left: auto;
+    margin-right: -340px;
+    flex-shrink: 0;
+}
+.social-icons a {
+    color: #423216;
+    margin-left: 5px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #b5935a;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive (Tampilan HP) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 95px;
+    }
+
+    .nav-links {
+        display: none; /* Sembunyikan menu utama */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .social-icons {
+        display: none; /* Sembunyikan medsos di HP agar simpel */
+    }
+}
+
+/* Styling untuk Hero Section */
+.hero {
+    height: 80vh; /* Tinggi hero 80% dari tinggi layar */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('sunset-with-muslim-mosque-foreground.jpg'); /* Masukkan nama file gambar Anda */
+    background-size: cover; /* Gambar menutupi seluruh area */
+    background-position: center; /* Gambar fokus di tengah */
+    display: flex;
+    align-items: center; /* Tulisan tengah secara vertikal */
+    justify-content: flex-start; /* Tulisan tengah secara horizontal */
+    text-align: left;
+    color: white;
+}
+
+.hero-content {
+    margin-left: 10%;
+}
+
+.hero-content h1 {
+    font-size: 80px; /* Ukuran tulisan besar */
+    font-weight: 750; /* extra-bold */
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Styling Tombol Selengkapnya */
+.btn-selengkapnya {
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparan putih */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid white;
+    transition: 0.3s;
+    font-size: 20px;
+    margin-bottom: 100px ;
+}
+
+.btn-selengkapnya:hover {
+    background-color: white;
+    color: #423216;
+}
+
+/* Styling Intro Section (Di bawah gambar) */
+.intro {
+    padding: 50px 20px;
+    background-color: #E8E0D5; /* Warna krem pucat sesuai gambar */
+    text-align: center;
+}
+
+.container-small {
+    max-width: 1500px;
+    margin: 0 auto;
+    line-height: 1.6; /* Jarak antar baris kalimat agar enak dibaca */
+    font-size: 25px;
+    color: #423216;
+}
+
+.intro strong {
+    font-weight: 700;
+    font-size: 28px;
+    color: #423216; /* Warna cokelat untuk nama brand */
+}
+
+/* Container umum untuk menjaga isi tetap di tengah */
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.kenapa-nadeem {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.kenapa-nadeem .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mengatur tata letak Kiri (Gambar) & Kanan (Teks) */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 200px; /* Jarak antara gambar dan teks */
+    flex-wrap: wrap; /* Agar jika di HP, gambar dan teks bertumpuk atas-bawah */
+    margin-top: -30px;
+}
+
+.image-area, .points-area {
+    flex: 1; /* Memberi ruang yang sama besar antara kiri dan kanan */
+    min-width: 100px;
+}
+
+/* Mengatur Gambar yang sudah jadi Blob */
+.img-ready {
+    width: 120%; /* Agar gambar mengisi lebar area */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    display: block; /* Menghilangkan spasi putih di bawah gambar */
+    margin-left: -200px;
+}
+
+/* Mengatur kotak setiap poin */
+.point-item {
+    display: flex;
+    align-items: center;
+    background-color: #433928; /* Warna cokelat gelap sesuai gambar */
+    color: white;
+    padding: 20px 150px; /* Tingkatkan padding horizontal untuk membuat lebih panjang */
+    margin-bottom: 10px;
+    border-radius: 15px;
+    transition: 0.3s; 
+    margin-left: -100px;
+}
+
+.point-item:hover {
+    transform: scale(1.02); /* Efek membesar sedikit saat disentuh mouse */
+}
+
+/* Mengatur lingkaran angka */
+.number {
+    background-color: white;
+    color: #433928;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-right: 40px; /* Geser teks lebih ke kanan */    
+    margin-left: -100px; /* Geser angka ke kiri */    
+    flex-shrink: 0; /* Agar angka tidak penyek saat teks panjang */
+}
+
+.text h3 {
+    font-size: 25px;
+    width: 1000%;
+    margin-bottom: 3px;
+    text-align: justify;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-right: -30px;
+    opacity: 0.9;
+    width: 140%;
+}
+
+/* Container umum */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 45px;
+    color: #4a3c28; /* Cokelat tua Nadeem */
+    margin-bottom: 50px;
+    font-weight: 900;
+}
+
+/* 1. Styling Testimonial Section (Gaya Figma) */
+.testimonial-section {
+    padding: 100px 0;
+    background: linear-gradient(to top, #E8E0D5 0%, #ffffff 100%); /* Transisi pudar dari krem ke putih ke atas */
+    text-align: center;
+}
+
+/* Memastikan judul testimoni berwarna gelap sesuai Figma */
+.testimonial-section .section-title {
+    color: #4a3c28; 
+    margin-bottom: 80px;
+    margin-top: -100px;
+}
+
+.testimonial-section .container {
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.testimonial-card {
+    flex: 1;
+    width: 500px;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    text-align: center; /* Membuat isi teks rata tengah */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Bayangan sangat halus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
+    border-radius: 15px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Ikon Kutip Besar */
+.quote-icon {
+    font-size: 80px;
+    color: #423216;
+    font-family: Georgia, serif; /* Font serif untuk bentuk kutip klasik */
+    line-height: 0.3; /* Mengatur tinggi ikon agar tidak makan tempat */
+    margin-bottom: 10px;
+}
+
+/* Teks Testimoni Utama */
+.testimonial-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #423216d6;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Garis Pembatas Kecil di Tengah */
+.divider-line {
+    width: 60px;
+    height: 1px;
+    background-color: #423216;
+    margin: 0 auto 30px auto; /* Margin auto untuk posisi tengah */
+}
+
+/* Footer Kartu (Profil & Bintang) */
+.card-footer {
+    display: flex;
+    justify-content: space-between; /* Menjauhkan profil ke kiri, bintang ke kanan */
+    align-items: center;
+    text-align: left; /* Mengembalikan teks profil ke rata kiri */
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-text h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #423216;
+    margin-bottom: 4px;
+}
+
+.profile-text p {
+    font-size: 15px;
+    color: #423216;
+}
+
+/* Bintang Penilaian */
+.stars {
+    color: #dfbd4a; /* Warna kuning emas spesifik Figma */
+    font-size: 23px;
+    letter-spacing: 3px; /* Memberi jarak antar bintang */
+    margin-right: 10px;
+}
+
+/* Responsive HP */
+@media (max-width: 900px) {
+    .testimonial-cards {
+        flex-direction: column;
+    }
+}
+
+/* Styling untuk Statistics Section */
+.statistics-section {
+    background-color: #423216;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 60px;
+    background-color: #ffffff;
+    opacity: 0.3;
+}
+
+/* --- PRODUK UNGGULAN BARU --- */
+.produk-unggulan {
+    padding: 100px 0;
+    background-color: #f4f1ea; /* Warna krem background */
+}
+
+.produk-unggulan .container {
+    display: block;
+}
+
+/* Membatasi area yang terlihat agar gambar sisanya tersembunyi */
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 15px; /* Opsional: memberi lengkungan pada ujung luar carousel */
+    padding: 10px 0;
+}
+
+/* Jalur panjang yang menampung 4 slide */
+.carousel-track {
+    display: flex;
+    width: 400%; /* Wajib 400% karena ada 4 slide */
+    transition: transform 0.6s ease-in-out; /* Animasi geser yang mulus */
+}
+
+/* Kotak untuk per-1 Slide (Di sinilah triknya!) */
+.carousel-slide {
+    width: 25%; /* 100% dibagi 4 slide = 25% dari lebar Track */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* JAMINAN: Pasti 3 kotak sama besar */
+    gap: 25px; /* Jarak antar gambar */
+    padding: 0 15px; /* Jarak tepi kiri dan kanan */
+    box-sizing: border-box;
+}
+
+/* Format Gambar agar rapi & seragam */
+.carousel-slide img {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* MEMAKSA semua gambar menjadi KOTAK SEMPURNA */
+    object-fit: cover; /* Agar gambar tidak gepeng walau dipaksa kotak */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Efek bayangan halus */
+}
+
+/* Styling Pagination Dots */
+.carousel-dots {
+    text-align: center;
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #433928; /* Warna cokelat Nadeem */
+    width: 30px; /* Membuat titik yang aktif jadi lebih panjang (elegan) */
+    border-radius: 10px;
+}
+
+/* Tambahkan ini agar gambar tidak "nyangkut" saat digeser manual */
+.carousel-track img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Tambahkan cursor grab agar user tahu bisa digeser */
+.carousel-viewport {
+    cursor: grab;
+}
+
+.carousel-viewport:active {
+    cursor: grabbing;
+}
+
+/* --- FOOTER SESUAI DESAIN BARU --- */
+.site-footer {
+    background-color: #E8E0D5; /* Warna background krem terang sesuai gambar */
+    color: #463926; /* Warna teks cokelat gelap Nadeem */
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* Mengatur Layout 3 Kolom */
+.footer-grid {
+    display: grid;
+    /* Kolom tengah diberi porsi lebih besar karena isinya (alamat) cukup panjang */
+    grid-template-columns: 0.8fr 1.8fr 0.8fr;  /* Kolom 1 & 3 lebih kecil, terdorong ke tepi */
+    gap: 120px;
+    padding-bottom: 50px;
+}
+
+/* --- KOLOM 1: Brand & Sosmed --- */
+.footer-logo-img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+    margin-left: -200px;
+    display: block;
+}
+
+.brand-desc {
+    font-size: 16px;
+    font-weight: 600; /* Teks ditebalkan sedikit sesuai desain */
+    line-height: 1.5;
+    margin-bottom: 25px;
+    margin-left: -200px;
+}
+
+/* Ikon Sosial Media */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: -200px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px; /* Memberi efek kotak melengkung pada ikon */
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+/* --- KOLOM 2: Info Kantor --- */
+.company-name {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #463926;
+}
+
+.info-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #463926;
+}
+
+.info-text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* --- KOLOM 3 & LINK UMUM --- */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #423216;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #b5935a; /* Berubah jadi warna agak emas saat di-hover */
+}
+
+/* Jarak khusus untuk Kebijakan Privasi */
+.legal-list {
+    margin-top: 35px;
+}
+
+/* --- BOTTOM BAR COPYRIGHT --- */
+.footer-bottom {
+    background-color: #463926; /* Cokelat Gelap */
+    color: #ffffff; /* Teks Putih */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Berubah jadi atas-bawah di layar kecil */
+        gap: 40px;
+    }
+}
+
+/* =========================================
+   HALAMAN TENTANG KAMI (tentang.html)
+   ========================================= */
+
+/* 1. Pengaturan Gambar Hero Utama */
+.tentang-hero {
+    width: 100%;
+}
+
+.hero-image-full {
+    width: 100%;
+    height: auto;
+    display: block; /* Mencegah munculnya celah kosong/putih di bawah gambar */
+}
+
+/* 2. Pengaturan Area Intro (Logo & Teks) */
+.tentang-intro {
+    padding: 50px 0; /* Memberi ruang kosong di atas dan bawah */
+    background-image: url('about2.png'); /* Sesuai desain, latar belakangnya putih bersih */
+}
+
+.intro-wrapper {
+    display: flex;
+    align-items: center; /* Membuat logo dan teks sejajar di tengah secara vertikal */
+    justify-content: center;
+    gap: 100px; /* Jarak yang memisahkan logo dan teks */
+    max-width: 1400px; /* Jangan terlalu lebar agar teksnya nyaman dibaca */
+    margin: 0 auto; /* Otomatis ke tengah layar */
+    text-align: justify;
+}
+
+.intro-logo-box {
+    flex: 0 0 220px; /* Mengunci lebar wadah logo (ubah angka ini jika logo kebesaran/kekecilan) */
+}
+
+.intro-logo-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: -100px;
+}
+
+.intro-text-box {
+    flex: 1; /* Mengambil seluruh sisa ruang di sebelah logo */
+}
+
+.intro-text-box p {
+    font-size: 24px; /* Ukuran font dibuat lumayan besar agar mirip desain Figma */
+    line-height: 1.6;
+    font-weight: 600;
+    color: #463926; /* Menggunakan Cokelat Gelap khas Nadeem */
+    margin: 0;
+}
+
+/* Responsive: Mengatur tampilan agar rapi jika dibuka di HP */
+@media (max-width: 768px) {
+    .intro-wrapper {
+        flex-direction: column; /* Posisi diubah dari bersampingan jadi atas-bawah */
+        text-align: center; /* Teks otomatis pindah ke tengah */
+        gap: 30px; /* Jarak sedikit dirapatkan */
+        padding: 0 20px;
+    }
+
+    .intro-logo-box {
+        flex: 0 0 150px; /* Logo otomatis mengecil sedikit di layar HP */
+    }
+    
+    .intro-text-box p {
+        font-size: 16px; /* Teks juga menyesuaikan ukuran layar */
+    }
+}
+
+/* =========================================
+   3. AREA FILOSOFI (Gambar Overlap/Menumpuk)
+   ========================================= */
+.filosofi-overlap-container {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.img-gedung-full {
+    width: 100%;
+    height: auto;
+    display: block; /* Mencegah munculnya celah kosong/putih di bawah gambar */
+    position: relative;
+    z-index: 1; /* Di bawah about4 */
+}
+
+.img-model-overlap {
+    position: absolute;
+    top: 20%; /* Atur jarak dari atas - ubah nilai ini sesuai kebutuhan */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; /* Atur ukuran gambar about4 - ubah sesuai kebutuhan */
+    height: auto;
+    margin-top: 130px;
+    margin-left: 650px;
+    z-index: 2; /* Di atas about3, di bawah sejarah */
+    display: block;
+}
+
+.teks-filosofi-container {
+    width: 55%; /* Membatasi teks hanya memakan 55% area layar sebelah kiri */
+    max-width: 1200px; /* Batas lebar maksimal agar teks tidak terlalu memanjang */
+    margin-left: 8%; /* Memberi jarak dari sisi kiri layar */
+    margin-top: 100px; /* Memberi jarak dari bawah gambar gedung */
+    margin-bottom: 105px;
+    text-align: right; /* Membuat teks rata kanan persis seperti di wireframe */
+    position: relative;
+    z-index: 3; /* Memastikan teks bisa terbaca jika bersinggungan dengan bayangan */
+}
+
+.teks-filosofi-container p {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #463926; /* Warna cokelat khas Nadeem */
+    margin: 0;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    .teks-filosofi-container {
+        width: 90%; /* Teks memakan layar penuh di HP */
+        margin-left: 5%;
+        text-align: center; /* Rata tengah agar lebih rapi di HP */
+        margin-top: 100px; /* Didorong lebih ke bawah agar tidak tertutup model di HP */
+    }
+}
+
+/* =========================================
+   5. AREA SEJARAH NADEEM
+   ========================================= */
+.sejarah-section {
+    background: linear-gradient(to bottom, #EFEBE3 0%, #FFFFFF 100%); /* Gradien vertikal ke putih */
+    padding: 80px 0; /* Memberikan ruang napas di atas dan bawah */
+    display: block;
+}
+
+.sejarah-container {
+    max-width: 1320px; /* Lebih lebar sehingga grid bisa memanjang ke samping */
+    margin: 0 auto; /* Menengahkan container */
+    padding: 0 30px; /* Jarak aman dari tepi layar */
+}
+
+.sejarah-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800; /* Ditebalkan */
+    color: #463926; /* Warna teks cokelat khas Nadeem */
+    margin-bottom: 50px; /* Jarak antara judul dan teks di bawahnya */
+}
+
+.sejarah-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi grid menjadi 2 kolom sama besar */
+    gap: 100px; /* Jarak di antara kolom kiri dan kanan */
+}
+
+.sejarah-col p {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.7; /* Memberi jarak antar baris agar nyaman dibaca */
+    color: #463926;
+    margin-bottom: 20px; /* Jarak antar paragraf */
+    text-align: justify; /* Membuat ujung teks rata kiri dan kanan */
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    .sejarah-section {
+        padding: 50px 0; /* Padding diperkecil di layar HP */
+    }
+
+    .sejarah-title {
+        font-size: 26px; /* Judul sedikit dikecilkan di HP */
+        margin-bottom: 30px;
+    }
+
+    .sejarah-grid {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi 1 kolom (atas-bawah) */
+        gap: 0; /* Jarak antar kolom dihapus karena sudah jadi atas-bawah */
+    }
+}
+
+/* =========================================
+   6. AREA VISI & MISI
+   ========================================= */
+.visi-misi-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Area Visi --- */
+.visi-container {
+    background-image: url('visi.png'); /* Memanggil gambar visi */
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 450px; /* Tinggi minimal area gambar */
+    display: flex;
+    justify-content: flex-end; /* Mendorong kotak putih ke sebelah kanan */
+    align-items: center; /* Menengahkan kotak secara vertikal */
+    padding: 50px 0; 
+}
+
+.visi-box {
+    background-color: #ffffff;
+    width: 60%; /* Lebar kotak memakan 60% layar */
+    max-width: 1100px;
+    padding: 60px 80px 60px 50px;
+    border-radius: 250px 0 0 250px; /* Membuat lengkungan besar hanya di sisi kiri */
+    text-align: right; /* Teks rata kanan sesuai desain */
+}
+
+.visi-box h2 {
+    font-size: 70px;
+    font-weight: 800;
+    color: #463926; /* Cokelat khas Nadeem */
+    margin: 0 0 5px 0;
+}
+
+.visi-box p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #463926;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Area Misi --- */
+.misi-container {
+    background-image: url('misi.png'); /* Memanggil gambar misi */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    justify-content: flex-start; /* Mendorong kotak putih ke sebelah kiri */
+    align-items: center;
+    padding: 50px 0;
+}
+
+.misi-box {
+    background-color: #ffffff;
+    width: 60%;
+    max-width: 1100px;
+    padding: 60px 50px 60px 80px;
+    border-radius: 0 250px 250px 0; /* Membuat lengkungan besar hanya di sisi kanan */
+    text-align: left; /* Teks rata kiri */
+}
+
+.misi-box h2 {
+    font-size: 70px;
+    font-weight: 800;
+    color: #463926;
+    margin: 0 0 5px 0;
+}
+
+.misi-box p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #463926;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    .visi-container, .misi-container {
+        justify-content: center; /* Kotak diletakkan di tengah pada layar kecil */
+        min-height: 350px;
+        padding: 40px 20px;
+    }
+
+    .visi-box, .misi-box {
+        width: 100%;
+        border-radius: 30px; /* Lengkungan diubah agar rapi di semua sudut untuk versi HP */
+        text-align: center; /* Teks dibuat rata tengah */
+        padding: 40px 30px;
+    }
+    
+    .visi-box h2, .misi-box h2 {
+        font-size: 28px;
+    }
+    
+    .visi-box p, .misi-box p {
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   HALAMAN PRODUK
+   ========================================= */
+.produk-hero {
+    background-image: url('produk.png'); /* Pastikan file produk.png ada di folder yang sama */
+    background-size: cover;
+    background-position: center right; /* Fokus background ke kanan agar gambar tas tidak terpotong */
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 800px; /* Tinggi area hero */
+    display: flex;
+    align-items: center; /* Menengahkan teks secara vertikal */
+    margin-top: 0px; /* Sesuaikan dengan tinggi navbar Anda agar tidak tertutup */
+}
+
+.produk-hero-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.produk-hero-text {
+    width: 100%; /* Membatasi teks hanya sampai tengah layar, agar tidak menabrak gambar tas */
+    max-width: 1000px;
+    margin-left: -380px;
+}
+
+.produk-hero-text h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #463926; /* Cokelat Nadeem */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.produk-hero-text p {
+    font-size: 25px;
+    font-weight: 500;
+    color: #463926;
+    line-height: 1.6;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    .produk-hero {
+        /* Di HP, gambar tas mungkin akan terpotong karena layarnya sempit. 
+           Kita ubah posisinya agar lebih pas */
+        background-position: 70% center; 
+        min-height: 400px;
+        align-items: flex-start; /* Teks ditarik agak ke atas */
+        padding-top: 50px;
+    }
+
+    .produk-hero-text {
+        width: 100%; /* Teks memakan layar penuh di HP */
+        background-color: rgba(255, 255, 255, 0.7); /* Memberi sedikit latar transparan agar teks terbaca walau menabrak gambar */
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .produk-hero-text h1 {
+        font-size: 28px;
+    }
+
+    .produk-hero-text p {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   HALAMAN PRODUK KAMI
+   ========================================= */
+
+.produk-section {
+    padding: 60px 20px 100px 20px;
+    background-color: #ffffff; /* Latar belakang halaman putih */
+}
+
+/* Memaksa elemen di dalam container produk untuk tersusun dari atas ke bawah */
+.produk-section .container {
+    display: flex;
+    flex-direction: column; /* Mengubah arah susunan menjadi atas ke bawah */
+    align-items: center; /* Memastikan isinya berada di tengah */
+    width: 100%;
+}
+
+/* Memastikan grid produk mengambil lebar penuh di bawah tombol */
+.produk-grid {
+    width: 100%;
+    /* (kode grid-template-columns yang sebelumnya biarkan saja tetap ada di sini) */
+}
+
+/* Judul "Produk Kami" */
+.produk-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: #463926; /* Warna cokelat khas Nadeem */
+    margin-bottom: 40px;
+}
+
+/* --- TOMBOL FILTER KATEGORI --- */
+.produk-filters {
+    width: 150%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agar tombol turun ke bawah jika layar sempit */
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: #463926;
+    border: 1px solid #463926;
+    padding: 10px 25px;
+    border-radius: 50px; /* Bentuk pil / kapsul */
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Efek saat tombol disorot atau aktif */
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #463926;
+    color: #ffffff;
+}
+
+/* --- GRID KATALOG PRODUK --- */
+.produk-grid {
+    display: grid;
+    /* Membuat 5 kolom sejajar dengan lebar yang sama */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; /* Jarak antar kartu produk */
+    max-width: 1300px; /* Opsional: Anda bisa menaikkan max-width (misal dari 1200px ke 1300px) agar kartu tidak terlalu sempit */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- KARTU PRODUK --- */
+.produk-card {
+    background-color: #F6F3EE; /* Warna krem lembut untuk kartu */
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-decoration: none !important; /* MENGHILANGKAN GARIS BAWAH */
+    color: inherit; /* Mencegah teks berubah warna menjadi biru bawaan link */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek sedikit melayang saat produk disorot mouse */
+.produk-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Pengaturan Gambar Produk */
+.produk-card img {
+    max-width: 100%;
+    height: 200px; /* Tinggi seragam agar rapi */
+    object-fit: contain; /* Memastikan gambar tidak terpotong */
+    margin-bottom: 5px;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.1)); /* Memberi efek bayangan pada produk */
+}
+
+/* Pengaturan Nama Produk */
+.produk-card h3 {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: #463926;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Class pembantu untuk menyembunyikan produk saat difilter */
+.hide-produk {
+    display: none !important;
+}
+
+/* --- RESPONSIVE UNTUK TABLET & HP --- */
+
+/* Untuk Tablet (layar di bawah 992px) - Jadi 2 Kolom */
+@media (max-width: 992px) {
+    .produk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Untuk HP (layar di bawah 576px) - Jadi 1 Kolom */
+@media (max-width: 576px) {
+    .produk-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .produk-filters {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+
+/* =========================================
+   HALAMAN EDUKASI
+   ========================================= */
+/* Memastikan isi dalam section hero (termasuk kapsul) berada di tengah layar */
+.edukasi-hero {
+    width: 100%;
+    display: block;
+    background-color: #ffffff;
+    padding-top: 100px;
+    text-align: center; /* Ini akan menengahkan elemen kapsul */
+}
+
+/* Styling bentuk Kapsul */
+.kapsul-judul-edukasi {
+    display: inline-block; /* Membuat lebar kotak hanya seukuran panjang teks di dalamnya */
+    border: 2.5px solid #463926; /* Warna garis tepi cokelat Nadeem */
+    border-radius: 50px; /* Membuat ujung kiri dan kanan melengkung penuh (kapsul) */
+    padding: 12px 40px; /* Jarak antara teks dan garis tepi (atas-bawah 12px, kiri-kanan 40px) */
+    margin-bottom: 0px; /* Jarak antara kapsul dan gambar Kabah di bawahnya */
+}
+
+.kapsul-judul-edukasi h2 {
+    font-size: 30px;
+    font-weight: 700; /* Teks tebal */
+    color: #463926; /* Warna teks cokelat */
+    margin: 0;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    .kapsul-judul-edukasi {
+        padding: 10px 20px; /* Padding dikecilkan agar muat di layar sempit */
+        margin-bottom: 25px;
+        margin-left: 20px; /* Memberi jarak aman dari tepi layar kiri */
+        margin-right: 20px; /* Memberi jarak aman dari tepi layar kanan */
+    }
+    
+    .kapsul-judul-edukasi h2 {
+        font-size: 16px; /* Font dikecilkan di HP */
+        line-height: 1.4; /* Jarak antar baris teks jika turun ke bawah */
+    }
+}
+
+/* 2. Pengaturan Area Intro (Logo & Teks) */
+.edukasi-intro {
+    padding: 50px 0; /* Memberi ruang kosong di atas dan bawah */
+    background-image: url('edukasi2.png');
+     /* Sesuai desain, latar belakangnya putih bersih */
+}
+
+/* =========================================
+   3. AREA VIDEO ANIMASI (Dropdown Style)
+   ========================================= */
+.edukasi-video-animasi {
+    padding: 60px 20px;
+    background-color: transparent; /* Sesuaikan dengan background halaman Anda */
+    text-align: center; /* Menengahkan dropdown dan video */
+}
+
+.video-animasi-wrapper {
+    max-width: 900px; /* Lebar maksimal area video agar proporsional */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Wadah Dropdown Kapsul */
+.dropdown-video-container {
+    margin-bottom: 90px; /* Jarak antara tombol dropdown dengan video di bawahnya */
+    width: 100%;
+}
+
+/* Modifikasi elemen Select bawaan browser menjadi kapsul */
+.video-dropdown {
+    appearance: none; /* Menghilangkan bentuk panah standar browser */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #ffffff;
+    border: 1.5px solid #463926; /* Warna cokelat Nadeem */
+    border-radius: 50px; /* Ujung melengkung */
+    padding: 12px 50px 12px 25px; /* Padding kanan lebih besar untuk tempat panah */
+    font-size: 20px;
+    font-weight: 700;
+    color: #463926;
+    cursor: pointer;
+    font-family: inherit;
+    /* Membuat panah kustom (ikon V) menggunakan background image SVG */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23463926"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center; /* Posisi panah di kanan */
+    background-size: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sedikit bayangan */
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.video-dropdown:focus {
+    outline: none;
+    border-color: #2b2216; /* Sedikit lebih gelap saat diklik */
+}
+
+/* Styling Kontainer Video Player */
+.video-player-container {
+    width: 150%;
+}
+
+/* Styling Pemutar Video */
+.video-player-container video {
+    width: 100%;
+    border-radius: 25px; /* Siku video melengkung sesuai desain */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Bayangan estetik */
+    background-color: #000; /* Layar hitam saat loading */
+    display: block;
+}
+
+/* --- RESPONSIVE UNTUK HP --- */
+@media (max-width: 768px) {
+    .video-dropdown {
+        font-size: 16px;
+        padding: 10px 40px 10px 20px;
+        max-width: 100%;
+    }
+    .video-player-container video {
+        border-radius: 15px; /* Lengkungan dikurangi untuk layar kecil */
+    }
+}
+
+
+/* =========================================
+   KOMUNITAS
+   ========================================= */
+
+.komunitas-hero {
+    width: 100%;
+    display: block;
+    background-color: #ffffff;
+    padding-top: 100px;
+}
+
+.komunitas-intro {
+    padding: 50px 0; /* Memberi ruang kosong di atas dan bawah */
+    background-image: url('komunitas2.png');
+     /* Sesuai desain, latar belakangnya putih bersih */
+}
+
+.komunitas-text-box {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.komunitas-text-box p {
+    font-size: 25px; /* Ukuran font dibuat lumayan besar agar mirip desain Figma */
+    line-height: 1.6;
+    font-weight: 600;
+    text-align: center;
+    color: #463926; /* Menggunakan Cokelat Gelap khas Nadeem */
+    margin-left: 0;
+}
+
+/* =========================================
+   HALAMAN KOMUNITAS - PROGRAM KAMI
+   ========================================= */
+.komunitas-program {
+    padding: 200px 20px;
+    background-image: url('komunitas3.png');
+    text-align: center;
+}
+
+.program-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #463926; /* Warna cokelat Nadeem */
+    text-align: center;
+    margin-top: -100px;
+    margin-bottom: 70px; /* Jarak ke kotak-kotak di bawahnya */
+}
+
+/* Wadah agar kartu berdampingan */
+.program-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Jarak antar kartu */
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* Desain Kartu (Card) */
+.program-card {
+    background-color: #ffffff;
+    border-radius: 30px; /* Ujung membulat yang cukup besar sesuai desain */
+    padding: 60px;
+    flex: 1; /* Membuat kedua kartu memiliki lebar yang sama */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+    text-align: left; /* Teks di dalam kartu rata kiri */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+    transform: scale(1.02); /* Angka 1.05 berarti membesar 5%. Bisa diganti misal 1.03 atau 1.1 */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Bayangan ditebalkan sedikit agar efek 'mengangkat' lebih terasa */
+}
+
+.program-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #463926;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center; /* Judul kartu rata tengah */
+}
+
+/* Desain Daftar Keuntungan (List) */
+.program-benefits {
+    list-style: none; /* Hilangkan titik bullet bawaan */
+    padding: 0;
+    margin: 0 0 40px 0;
+    flex-grow: 1; /* Mendorong tombol ke bagian paling bawah */
+}
+
+.program-benefits li {
+    font-size: 18px;
+    color: #463926;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Sejajarkan ikon centang dengan teks */
+}
+
+.check-icon {
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Desain Tombol Bergabung */
+.btn-bergabung {
+    display: block;
+    background-color: #463926; /* Tombol cokelat gelap */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Tombol berbentuk kapsul */
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /* Memosisikan tombol di kanan bawah sesuai desain */
+}
+
+.btn-bergabung:hover {
+    background-color: #b5935a; /* Warna lebih gelap saat disentuh (hover) */
+}
+
+/* --- RESPONSIVE UNTUK LAYAR HP --- */
+@media (max-width: 768px) {
+    .program-cards-wrapper {
+        flex-direction: column; /* Kartu disusun atas-bawah di HP */
+        gap: 30px;
+    }
+
+    .program-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .program-card {
+        padding: 30px;
+    }
+}
+
+/* =========================================
+   HALAMAN KONTAK KAMI (DESAIN OVERLAP)
+   ========================================= */
+
+.kontak-section {
+    padding: 80px 20px 100px 20px;
+    /* Latar belakang warna gradasi krem ke putih */
+    background: linear-gradient(to bottom, #EFEBE3 0%, #FFFFFF 100%);
+}
+
+.kontak-page-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    color: #463926;
+    margin-bottom: 50px;
+}
+
+/* Wadah diatur dengan flex dan items-center agar posisinya sejajar di tengah */
+.kontak-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* --- KOTAK PUTIH (FORMULIR) --- */
+.kontak-form-box {
+    background-color: #ffffff;
+    border-radius: 30px;
+    /* Padding kanan sengaja dibuat sangat besar (130px) agar area form tidak tertutup kotak cokelat */
+    padding: 50px 150px 80px 110px; 
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    z-index: 1; /* Urutan lapisan bawah */
+}
+
+.kontak-form-box h3 {
+    font-size: 30px;
+    color: #463926;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: -50px;
+}
+
+.kontak-desc {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-left: -50px;
+}
+
+.form-row {
+    display: flex;
+    gap: 70px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: -50px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #463926;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Bentuk kapsul */
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group textarea {
+    border-radius: 20px;
+    resize: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #463926;
+}
+
+.btn-kirim {
+    background-color: #463926;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn-kirim:hover {
+    background-color: #b5935a;
+}
+
+.form-hubungi-kami::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- KOTAK COKELAT (INFO KONTAK) --- */
+.kontak-info-box {
+    background-color: #3f3221; /* Cokelat tua sesuai gambar */
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 50px 40px;
+    width: 50%; /* Ukuran lebih kecil dari kotak putih */
+    z-index: 2; /* Urutan lapisan ATAS (menumpuk kotak putih) */
+    margin-left: -100px; /* INI KUNCI EFEK MENUMPUKNYA: Menarik kotak ke kiri sejauh 100px */
+    box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.15); /* Memberi bayangan ke arah kiri agar terlihat melayang */
+}
+
+.kontak-info-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.info-item {
+    background-color: rgba(255, 255, 255, 0.15); /* Kotak semi transparan di dalam kotak cokelat */
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.info-icon img {
+    width: 35px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.info-text span {
+    font-size: 18px;
+    opacity: 0.8;
+    display: block;
+    margin-top: 13px;
+}
+
+.info-text strong {
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+}
+
+.kontak-sosmed {
+    margin-top: 20px;
+}
+
+.kontak-sosmed p {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.sosmed-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.sosmed-icons a {
+    color: #3f3221;
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.sosmed-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE UNTUK HP & TABLET --- */
+@media (max-width: 992px) {
+    .kontak-wrapper {
+        flex-direction: column; /* Kotak disusun atas-bawah */
+    }
+    
+    .kontak-form-box {
+        width: 100%;
+        padding: 40px; /* Padding dinormalkan kembali */
+        z-index: 1;
+    }
+    
+    .kontak-info-box {
+        width: 90%; /* Sedikit lebih kecil dari kotak putih */
+        margin-left: 0; /* Hapus margin kiri */
+        margin-top: -30px; /* Buat efek menumpuk secara vertikal (atas-bawah) */
+        z-index: 2;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* =========================================
+   HALAMAN KEBIJAKAN PRIVASI
+   ========================================= */
+
+.privacy-section {
+    padding: 80px 20px 100px 20px;
+    background: linear-gradient(to bottom, #EFEBE3 0%, #FFFFFF 100%);
+}
+
+/* Kotak putih besar dengan lengkungan */
+.privacy-box {
+    background-color: #ffffff;
+    border-radius: 40px; /* Lengkungan sudut yang besar */
+    max-width: 3000px; /* Lebar maksimal kotak */
+    margin: 0 auto; /* Posisi di tengah */
+    padding: 80px 100px; /* Ruang lega di dalam kotak */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05); /* Bayangan tipis */
+}
+
+/* Pengaturan Judul Utama */
+.privacy-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    color: #463926; /* Warna cokelat Nadeem */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Pengaturan Tanggal Pembaruan */
+.privacy-date {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 50px;
+}
+
+/* Pengaturan Teks Paragraf */
+.privacy-content p {
+    font-size: 16px;
+    line-height: 1.8; /* Jarak antar baris agar mudah dibaca */
+    color: #333333; /* Warna abu-abu gelap kehitaman */
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+/* Pengaturan Sub-judul (H3) */
+.privacy-content h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #463926;
+    margin-top: 40px; /* Jarak yang lebih jauh dari bagian sebelumnya */
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Pengaturan Daftar Peluru (Bullet points) */
+.privacy-content ul {
+    margin-bottom: 20px;
+    padding-left: 25px; /* Menggeser titik bullet ke dalam */
+}
+
+.privacy-content li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 8px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+/* --- RESPONSIVE UNTUK LAYAR HP --- */
+@media (max-width: 768px) {
+    .privacy-box {
+        padding: 40px 30px; /* Mengurangi padding di HP agar tidak terlalu sempit */
+        border-radius: 20px;
+    }
+    
+    .privacy-title {
+        font-size: 32px;
+    }
+    
+    .privacy-content h3 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+}
+
+/* ================= FAQ FLOATING WIDGET ================= */
+.faq-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.faq-fab img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.faq-fab:hover {
+    transform: scale(1.1);
+}
+
+/* ================= FAQ MODAL CONTAINER ================= */
+.faq-modal {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 400px;
+    max-width: 90vw;
+    height: 600px;
+    max-height: 80vh;
+    background: linear-gradient(135deg, #fdfbf7 0%, #f4eae1 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: none; /* Disembunyikan secara default */
+    flex-direction: column;
+    z-index: 9998;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-modal.active {
+    display: flex;
+    animation: slideUpFade 0.4s ease forwards;
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= HEADER FAQ ================= */
+.faq-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+}
+
+.faq-back-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #423216; /* Coklat tua */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.faq-header h2 {
+    font-size: 16px;
+    color: #423216;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* ================= TAMPILAN AWAL (SPLASH) ================= */
+.faq-splash {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 20px 20px 20px 20px;
+    margin: 0 20px 20px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.faq-splash-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.btn-mulai, .btn-reset {
+    background-color: #423216;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-mulai:hover, .btn-reset:hover {
+    background-color: #b5935a;
+}
+
+/* ================= AREA CHAT ================= */
+.faq-chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+    border-radius: 20px 20px 20px 20px;
+    margin: 0 20px 20px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.faq-chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Scrollbar kustom untuk area chat */
+.faq-chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+.faq-chat-box::-webkit-scrollbar-thumb {
+    background: #e0d5cb;
+    border-radius: 10px;
+}
+
+/* ================= CHAT BUBBLE ================= */
+.chat-msg {
+    max-width: 85%;
+    padding: 12px 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.system-msg {
+    align-self: flex-start;
+    background-color: #ffffff;
+    color: #423216;
+    border-radius: 15px 15px 15px 0;
+    border: 1px solid #f0e9e1;
+}
+
+.user-msg {
+    align-self: flex-end;
+    background-color: #ffffff;
+    color: #423216;
+    border-radius: 15px 15px 0 15px;
+    border: 1px solid #f0e9e1;
+}
+
+/* ================= OPTIONS & BUTTONS ================= */
+.faq-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.faq-option-btn {
+    background-color: #ffffff;
+    border: 1px solid #e0d5cb;
+    color: #423216;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    text-align: left;
+}
+
+.faq-option-btn:hover {
+    background-color: #f8f4f0;
+    border-color: #423216;
+}
+
+/* Contact Card Khusus */
+.contact-card {
+    background-color: #fdfbf7;
+    border: 1px solid #e0d5cb;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.contact-card p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #423216;
+}
+
+.btn-wa {
+    background-color: #423216;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-wa:hover {
+    background-color: #b5935a;
+}
+
+.faq-footer {
+    padding: 15px;
+    text-align: right;
+    background: #fff;
+    border-top: 1px solid #f0e9e1;
+}
+
+/* Responsif untuk HP */
+@media screen and (max-width: 480px) {
+    .faq-modal {
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+    .faq-splash, .faq-chat-container {
+        margin: 0;
+        border-radius: 20px 20px 0 0;
+    }
+}
