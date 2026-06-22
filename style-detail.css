@@ -219,7 +219,74 @@ body {
         padding-top: 95px;
     }
 
+    .page-title {
+        padding: 30px 15px;
+    }
+
+    .page-title h1 {
+        font-size: 32px;
+    }
+
     .product-detail-container {
-        grid-template-columns: 1fr; /* Jika layar sempit, baru dia turun ke bawah */
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    .product-gallery {
+        max-width: 100%;
+    }
+
+    .main-image-box {
+        aspect-ratio: 1 / 1;
+    }
+
+    .thumbnails-window {
+        max-width: 100%;
+    }
+
+    .thumb-img {
+        width: 68px;
+    }
+
+    .info-group h3 {
+        font-size: 18px;
+    }
+
+    .info-group p,
+    .info-group li {
+        font-size: 14px;
+    }
+
+    .buy-btn {
+        max-width: 100%;
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 88px;
+    }
+
+    .page-title h1 {
+        font-size: 28px;
+    }
+
+    .thumbnail-row {
+        gap: 8px;
+    }
+
+    .thumb-img {
+        width: 58px;
+    }
+
+    .arrow-btn {
+        font-size: 20px;
+    }
+
+    .buy-action {
+        margin-top: 0;
     }
 }
