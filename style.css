@@ -1304,9 +1304,19 @@ img {
 }
 
 .produk-hero-text {
-    width: 55%;
-    max-width: 900px;
+    width: 48%;
+    max-width: 960px;
     margin-left: 0;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.55) 15%,
+        rgba(255, 255, 255, 0.82) 55%
+    );
+    padding: 34px 40px;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(2px);
 }
 
 .produk-hero-text h1 {
@@ -1315,6 +1325,8 @@ img {
     color: #463926;
     line-height: 1.2;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .produk-hero-text p {
@@ -1322,6 +1334,8 @@ img {
     font-weight: 500;
     color: #463926;
     line-height: 1.6;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -1340,9 +1354,16 @@ img {
         width: 100%;
         max-width: 100%;
         margin-left: 0;
-        background-color: rgba(255, 255, 255, 0.78);
-        padding: 20px;
-        border-radius: 15px;
+        background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.55) 15%,
+        rgba(255, 255, 255, 0.82) 55%
+        );
+        padding: 34px 40px;
+        border-radius: 24px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(2px);
     }
 
     .produk-hero-text h1 {
@@ -1352,6 +1373,7 @@ img {
     .produk-hero-text p {
         font-size: 16px;
     }
+
 }
 
 .produk-section {
@@ -1490,12 +1512,24 @@ img {
     .produk-hero-text {
         width: 100%;
     }
+
+    .produk-title {
+        font-size: 38px;
+        line-height: 1.15;
+        margin-bottom: 35px;
+    }
 }
 
 @media (max-width: 420px) {
     .produk-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+    }
+
+    .produk-title {
+        font-size: 34px;
+        line-height: 1.15;
+        margin-bottom: 30px;
     }
 }
 
