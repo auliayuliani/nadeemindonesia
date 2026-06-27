@@ -1523,27 +1523,6 @@ img {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .kapsul-judul-edukasi {
-        padding: 10px 20px;
-        margin-bottom: 25px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .kapsul-judul-edukasi h2 {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .edukasi-hero {
-        padding-top: 35px;
-    }
-}
-
 .edukasi-intro {
     padding: 50px 0;
     background-image: url('edukasi2.png');
@@ -1611,13 +1590,82 @@ img {
 }
 
 @media (max-width: 768px) {
+    .kapsul-judul-edukasi {
+        padding: 10px 20px;
+        margin-bottom: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .kapsul-judul-edukasi h2 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .edukasi-hero {
+        padding-top: 35px;
+    }
+
+        .edukasi-intro {
+        padding: 55px 20px 65px;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .edukasi-intro .intro-wrapper {
+        gap: 24px;
+        padding: 0;
+    }
+
+    .edukasi-intro .intro-logo-box {
+        width: 220px;
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .edukasi-intro .intro-text-box {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+    .edukasi-intro .intro-text-box p {
+        font-size: 18px;
+        line-height: 1.45;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 auto;
+    }
+
     .video-dropdown {
         font-size: 16px;
         padding: 10px 40px 10px 20px;
         max-width: 100%;
     }
+
     .video-player-container video {
         border-radius: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edukasi-intro {
+        padding: 45px 18px 55px;
+    }
+
+    .edukasi-intro .intro-logo-box {
+        width: 190px;
+    }
+
+    .edukasi-intro .intro-text-box p {
+        font-size: 13px;
+        line-height: 1.48;
+    }
+
+    .video-dropdown {
+        font-size: 13px;
+        padding: 8px 35px 8px 18px;
     }
 }
 
