@@ -1,23 +1,9 @@
-/* =========================================
-   NORA BAG
-   ========================================= */
-/* Pengaturan Dasar */
-* {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Sesuaikan dengan font Nadeem */
-}
-
-body {
-    margin: 0;
-    padding: 120px 0 0;
-    background-color: #ffffff;
-    color: #333333;
-}
-
-/* Judul Halaman */
+/* JUDUL HALAMAN DETAIL PRODUK */
 .page-title {
+    position: relative;
     text-align: center;
     padding: 40px 20px;
+    margin-top: 0;
     background-image: url(produkdetail.png);
     background-size: cover;
     background-position: center;
@@ -26,93 +12,111 @@ body {
 .page-title h1 {
     margin: 0;
     font-size: 45px;
-    color: #4A3C2A; /* Cokelat khas Nadeem */
+    color: #4A3C2A;
 }
 
-/* --- KONTAINER UTAMA (PEMBAGI 2 KOLOM) --- */
+.product-back-btn {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: #423216;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-back-btn:hover {
+    background-color: #b5935a;
+    transform: translateY(-50%) translateX(-3px);
+}
+
+/* LAYOUT DETAIL PRODUK */
 .product-detail-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Memaksa membagi jadi 2 kolom (kiri dan kanan) */
-    gap: 60px; /* Jarak antara gambar dan teks */
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
-    align-items: start; /* Memastikan teks di kanan menempel ke atas sejajar dengan gambar */
+    align-items: start;
 }
 
-/* --- KOLOM KIRI (GALERI) --- */
+/* GALERI PRODUK */
 .product-gallery {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    max-width: 500px; /* Mengunci lebar maksimal galeri agar tidak merampas tempat teks */
+    max-width: 500px;
     margin: 0 auto;
 }
 
-/* --- 1. GAMBAR UTAMA SQUAR & TANPA BACKGROUND --- */
 .main-image-box {
-    /* Menghapus background-color: #F7F5F0; */ 
-    aspect-ratio: 1 / 1; /* MENGUBAH MENJADI 1:1 */
+
+    aspect-ratio: 1 / 1;
     border-radius: 10px;
-    padding: 0px; /* Hapus padding agar gambar asli memenuhi kotak */
+    padding: 0px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */ /* Opsional: jika gambar melebihi kotak */
+
 }
 
 .main-image-box img {
     max-width: 100%;
-    height: 100%; /* Pastikan gambar memenuhi kotak 1:1 */
-    object-fit: contain; /* Gambar asli tetap terjaga, tapi muat dalam square */
+    height: 100%;
+    object-fit: contain;
 }
 
-/* --- 2. JENDELA CAROUSEL THUMBNAIL BARU (SUPER PENTING) --- */
 .thumbnail-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    position: relative; 
+    position: relative;
 }
 
-/* JENDELA PANDANG (VIEWPORT) */
 .thumbnails-window {
-    width: 100%; /* Mengisi ruang yang tersedia di kolom kiri */
-    max-width: 450px; /* Kita kunci lebarnya agar tidak membesarkan kolom galeri! Cukup untuk 4-5 gambar. */
-    overflow: hidden; /* MENYEMBUNYIKAN GAMBAR YG TIDAK MUAT DI JENDELA */
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
     position: relative;
     margin: 0 auto;
 }
 
-/* DAFTAR GAMBAR (TRACK) YANG PANJANG */
 .thumbnails-track {
     display: flex;
-    gap: 15px; /* Jarak antar gambar */
-    transition: transform 0.3s ease-in-out; /* PENTING: Mulus saat JavaScript menggeser (transform) */
-    padding: 5px; /* Ruang untuk border border-active */
-    width: max-content; /* Biarkan track ini sepanjang semua gambar yang ada */
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+    padding: 5px;
+    width: max-content;
 }
 
-/* --- 3. THUMBNAIL SQUAR (1:1) --- */
 .thumb-img {
-    width: 90px; /* Lebar konsisten untuk satu slide */
-    aspect-ratio: 1 / 1; /* MENGUBAH MENJADI 1:1 */
-    flex-shrink: 0; /* Mencegah gambar tergencet */
-    background-color: #F7F5F0; /* Background Krem Lembut Nadeem untuk thumbs */
+    width: 90px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    background-color: #F7F5F0;
     border-radius: 8px;
     object-fit: contain;
     cursor: pointer;
     border: 2px solid transparent;
     padding: 5px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-/* Penanda gambar mana yang sedang dilihat */
 .thumb-img.active {
-    border-color: #4A3C2A; 
+    border-color: #4A3C2A;
 }
 
 .arrow-btn {
@@ -124,17 +128,7 @@ body {
     color: #4A3C2A;
 }
 
-.arrow-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #4A3C2A;
-}
-
-/* --- BAGIAN KANAN: TEKS INFO --- */
-/* --- KOLOM KANAN (TEKS) --- */
+/* INFORMASI PRODUK */
 .product-info {
     display: flex;
     flex-direction: column;
@@ -165,7 +159,6 @@ body {
     padding-left: 20px;
 }
 
-/* Lingkaran Warna */
 .color-options {
     display: flex;
     gap: 15px;
@@ -179,7 +172,6 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Tombol Beli */
 .buy-action {
     margin-top: 10px;
 }
@@ -213,18 +205,26 @@ body {
     height: 24px;
 }
 
-/* --- RESPONSITAS (Agar turun ke bawah HANYA jika dibuka di HP) --- */
+/* RESPONSIVE DETAIL PRODUK */
 @media (max-width: 850px) {
     body {
-        padding-top: 95px;
+        padding-top: 77px;
     }
-
+    
     .page-title {
-        padding: 30px 15px;
+        position: relative;
+        padding: 28px 55px;
     }
 
     .page-title h1 {
         font-size: 32px;
+    }
+
+    .product-back-btn {
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
     }
 
     .product-detail-container {
@@ -234,15 +234,41 @@ body {
     }
 
     .product-gallery {
-        max-width: 100%;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        align-items: center;
     }
 
     .main-image-box {
+        width: 100%;
         aspect-ratio: 1 / 1;
+        height: auto;
+        max-height: none;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
     }
 
     .thumbnails-window {
         max-width: 100%;
+    }
+
+    .thumbnail-row {
+        width: 100%;
+        max-width: 360px;
+        margin: 12px auto 0;
     }
 
     .thumb-img {
@@ -267,14 +293,30 @@ body {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 88px;
+        padding-top: 77px;
     }
 
+    .page-title {
+        padding: 25px 50px;
+    }
+    
     .page-title h1 {
         font-size: 28px;
     }
 
+    .product-back-btn {
+        left: 16px;
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .product-gallery {
+        max-width: 320px;
+    }
+
     .thumbnail-row {
+        max-width: 320px;
         gap: 8px;
     }
 

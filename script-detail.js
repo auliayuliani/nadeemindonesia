@@ -1,52 +1,105 @@
-// File: script-detail.js
-
-// 1. Fungsi Ganti Gambar Utama (Biarkan tetap ada)
+/* GALERI DETAIL PRODUK */
 function gantiGambar(sumberGambarBaru, elemenThumb) {
-    document.getElementById('main-product-image').src = sumberGambarBaru;
-    let semuaThumb = document.querySelectorAll('.thumb-img');
-    semuaThumb.forEach(function(img) { img.classList.remove('active'); });
+    const mainProductImage = document.getElementById('main-product-image');
+    const semuaThumb = document.querySelectorAll('.thumb-img');
+
+    if (!mainProductImage || !elemenThumb) return;
+
+    mainProductImage.src = sumberGambarBaru;
+    semuaThumb.forEach(img => img.classList.remove('active'));
     elemenThumb.classList.add('active');
 }
 
-// ==========================================
-// 2. FUNGSI BARU: CAROUSEL THUMBNAIL
-// ==========================================
+const mainProductImage = document.getElementById('main-product-image');
+let touchStartX = 0;
 
-const track = document.getElementById('thumb-container'); // Kotak track yang panjang
-const btnLeft = document.getElementById('scroll-left');
-const btnRight = document.getElementById('scroll-right');
-
-// Pastikan elemennya ada di halaman sebelum menjalankan rumus
-if (track && btnLeft && btnRight) {
-    
-    // VARIABEL PENTING
-    const imageWidth = 90;  // Lebar 1 gambar (sesuai CSS)
-    const gap = 15;        // Jarak antar gambar (sesuai CSS)
-    const slideWidth = imageWidth + gap; // Total lebar 1 slide (1 gambar + jarak) = 105 pixel
-
-    // Kita akan memakai teknik "transform: translateX()" untuk menggeser.
-    // Variabel index untuk melacak seberapa jauh kita telah bergeser ke kanan.
-    let index = 0; 
-    const totalImages = track.querySelectorAll('.thumb-img').length; // Total gambar (misal: 10)
-    const visibleImages = 4; // Berapa gambar yang muat di jendela? (misal: 4)
-    
-    // Index maksimum yang bisa digeser adalah total gambar minus gambar yang terlihat.
-    // Jika 10 gambar dan muat 4, kita bisa menggeser 6 kali.
-    const maxIndex = totalImages - visibleImages;
-
-    // Jika panah KIRI diklik
-    btnLeft.addEventListener('click', function() {
-        if (index > 0) { // Hanya geser jika kita sudah bergeser ke kanan
-            index--; // Bergeser ke kiri 1 slide
-            track.style.transform = `translateX(-${index * slideWidth}px)`; // Geser track
-        }
+if (mainProductImage) {
+    mainProductImage.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
     });
 
-    // Jika panah KANAN diklik
-    btnRight.addEventListener('click', function() {
-        if (index < maxIndex) { // Hanya geser jika belum mencapai batas kanan
-            index++; // Bergeser ke kanan 1 slide
-            track.style.transform = `translateX(-${index * slideWidth}px)`; // Geser track
+    mainProductImage.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        const allThumbs = Array.from(document.querySelectorAll('.thumb-img'));
+        const activeIndex = allThumbs.findIndex(thumb => thumb.classList.contains('active'));
+
+        if (Math.abs(diff) <= 40 || activeIndex === -1) return;
+
+        const nextIndex = Math.max(0, Math.min(diff > 0 ? activeIndex + 1 : activeIndex - 1, allThumbs.length - 1));
+        const nextThumb = allThumbs[nextIndex];
+
+        if (nextThumb) {
+            gantiGambar(nextThumb.src, nextThumb);
         }
     });
 }
+
+/* CAROUSEL THUMBNAIL DETAIL PRODUK */
+const thumbnailTrack = document.getElementById('thumb-container');
+const thumbnailWindow = document.getElementById('thumb-window');
+const btnLeft = document.getElementById('scroll-left');
+const btnRight = document.getElementById('scroll-right');
+
+if (thumbnailTrack && thumbnailWindow && btnLeft && btnRight) {
+    let index = 0;
+    const totalImages = thumbnailTrack.querySelectorAll('.thumb-img').length;
+
+    function getSlideWidth() {
+        const firstThumb = thumbnailTrack.querySelector('.thumb-img');
+        return firstThumb ? firstThumb.offsetWidth + 15 : 105;
+    }
+
+    function getVisibleImages() {
+        const firstThumb = thumbnailTrack.querySelector('.thumb-img');
+        return firstThumb ? Math.floor(thumbnailWindow.offsetWidth / (firstThumb.offsetWidth + 15)) : 4;
+    }
+
+    function getMaxIndex() {
+        return Math.max(0, totalImages - getVisibleImages());
+    }
+
+    function updateThumbnailCarousel() {
+        index = Math.min(index, getMaxIndex());
+        thumbnailTrack.style.transform = `translateX(-${index * getSlideWidth()}px)`;
+        btnLeft.style.opacity = index <= 0 ? '0.3' : '1';
+        btnRight.style.opacity = index >= getMaxIndex() ? '0.3' : '1';
+    }
+
+    btnLeft.addEventListener('click', () => {
+        if (index <= 0) return;
+        index--;
+        updateThumbnailCarousel();
+    });
+
+    btnRight.addEventListener('click', () => {
+        if (index >= getMaxIndex()) return;
+        index++;
+        updateThumbnailCarousel();
+    });
+
+    window.addEventListener('resize', () => {
+        index = 0;
+        updateThumbnailCarousel();
+    });
+
+    updateThumbnailCarousel();
+}
+
+/* MOBILE MENU */
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.getElementById('navLinks');
+
+    if (!mobileMenu || !navLinks || mobileMenu.dataset.menuReady) return;
+
+    mobileMenu.dataset.menuReady = 'true';
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+});
