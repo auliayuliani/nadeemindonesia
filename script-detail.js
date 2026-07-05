@@ -1,89 +1,154 @@
-/* GALERI DETAIL PRODUK */
+/* GALERI DETAIL PRODUK + AUTO SLIDE */
+const mainProductImage = document.getElementById('main-product-image');
+const semuaThumb = Array.from(document.querySelectorAll('.thumb-img'));
+
+const thumbnailTrack = document.getElementById('thumb-container');
+const thumbnailWindow = document.getElementById('thumb-window');
+const btnLeft = document.getElementById('scroll-left');
+const btnRight = document.getElementById('scroll-right');
+
+let detailIndex = Math.max(0, semuaThumb.findIndex(thumb => thumb.classList.contains('active')));
+let thumbnailIndex = 0;
+let touchStartX = 0;
+let detailAutoTimer = null;
+
+const detailAutoDelay = 3000; // 3000 = 3 detik
+
+function getSlideWidth() {
+    const firstThumb = thumbnailTrack ? thumbnailTrack.querySelector('.thumb-img') : null;
+    return firstThumb ? firstThumb.offsetWidth + 15 : 105;
+}
+
+function getVisibleImages() {
+    const firstThumb = thumbnailTrack ? thumbnailTrack.querySelector('.thumb-img') : null;
+    return firstThumb && thumbnailWindow
+        ? Math.floor(thumbnailWindow.offsetWidth / (firstThumb.offsetWidth + 15))
+        : 4;
+}
+
+function getMaxThumbnailIndex() {
+    return Math.max(0, semuaThumb.length - getVisibleImages());
+}
+
+function updateThumbnailCarousel() {
+    if (!thumbnailTrack || !btnLeft || !btnRight) return;
+
+    thumbnailIndex = Math.max(0, Math.min(thumbnailIndex, getMaxThumbnailIndex()));
+
+    thumbnailTrack.style.transform = `translateX(-${thumbnailIndex * getSlideWidth()}px)`;
+
+    btnLeft.style.opacity = thumbnailIndex <= 0 ? '0.3' : '1';
+    btnRight.style.opacity = thumbnailIndex >= getMaxThumbnailIndex() ? '0.3' : '1';
+}
+
+function tampilkanGambarDetail(indexBaru, resetTimer = true) {
+    if (!mainProductImage || !semuaThumb.length) return;
+
+    if (indexBaru >= semuaThumb.length) indexBaru = 0;
+    if (indexBaru < 0) indexBaru = semuaThumb.length - 1;
+
+    detailIndex = indexBaru;
+
+    const thumbAktif = semuaThumb[detailIndex];
+
+    mainProductImage.src = thumbAktif.src;
+
+    semuaThumb.forEach(thumb => thumb.classList.remove('active'));
+    thumbAktif.classList.add('active');
+
+    const jumlahTerlihat = getVisibleImages();
+
+    if (detailIndex < thumbnailIndex) {
+        thumbnailIndex = detailIndex;
+    }
+
+    if (detailIndex >= thumbnailIndex + jumlahTerlihat) {
+        thumbnailIndex = detailIndex - jumlahTerlihat + 1;
+    }
+
+    updateThumbnailCarousel();
+
+    if (resetTimer) {
+        mulaiAutoSlideDetail();
+    }
+}
+
 function gantiGambar(sumberGambarBaru, elemenThumb) {
-    const mainProductImage = document.getElementById('main-product-image');
-    const semuaThumb = document.querySelectorAll('.thumb-img');
+    const indexKlik = semuaThumb.indexOf(elemenThumb);
+
+    if (indexKlik !== -1) {
+        tampilkanGambarDetail(indexKlik);
+        return;
+    }
 
     if (!mainProductImage || !elemenThumb) return;
 
     mainProductImage.src = sumberGambarBaru;
     semuaThumb.forEach(img => img.classList.remove('active'));
     elemenThumb.classList.add('active');
+
+    mulaiAutoSlideDetail();
 }
 
-const mainProductImage = document.getElementById('main-product-image');
-let touchStartX = 0;
+function mulaiAutoSlideDetail() {
+    if (detailAutoTimer) {
+        clearInterval(detailAutoTimer);
+    }
 
-if (mainProductImage) {
+    if (semuaThumb.length <= 1) return;
+
+    detailAutoTimer = setInterval(() => {
+        tampilkanGambarDetail(detailIndex + 1, false);
+    }, detailAutoDelay);
+}
+
+if (mainProductImage && semuaThumb.length) {
     mainProductImage.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
     });
 
     mainProductImage.addEventListener('touchend', (e) => {
         const diff = touchStartX - e.changedTouches[0].clientX;
-        const allThumbs = Array.from(document.querySelectorAll('.thumb-img'));
-        const activeIndex = allThumbs.findIndex(thumb => thumb.classList.contains('active'));
 
-        if (Math.abs(diff) <= 40 || activeIndex === -1) return;
+        if (Math.abs(diff) <= 40) return;
 
-        const nextIndex = Math.max(0, Math.min(diff > 0 ? activeIndex + 1 : activeIndex - 1, allThumbs.length - 1));
-        const nextThumb = allThumbs[nextIndex];
-
-        if (nextThumb) {
-            gantiGambar(nextThumb.src, nextThumb);
+        if (diff > 0) {
+            tampilkanGambarDetail(detailIndex + 1);
+        } else {
+            tampilkanGambarDetail(detailIndex - 1);
         }
     });
+
+    semuaThumb.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            tampilkanGambarDetail(index);
+        });
+    });
+
+    tampilkanGambarDetail(detailIndex, false);
+    mulaiAutoSlideDetail();
 }
 
-/* CAROUSEL THUMBNAIL DETAIL PRODUK */
-const thumbnailTrack = document.getElementById('thumb-container');
-const thumbnailWindow = document.getElementById('thumb-window');
-const btnLeft = document.getElementById('scroll-left');
-const btnRight = document.getElementById('scroll-right');
-
-if (thumbnailTrack && thumbnailWindow && btnLeft && btnRight) {
-    let index = 0;
-    const totalImages = thumbnailTrack.querySelectorAll('.thumb-img').length;
-
-    function getSlideWidth() {
-        const firstThumb = thumbnailTrack.querySelector('.thumb-img');
-        return firstThumb ? firstThumb.offsetWidth + 15 : 105;
-    }
-
-    function getVisibleImages() {
-        const firstThumb = thumbnailTrack.querySelector('.thumb-img');
-        return firstThumb ? Math.floor(thumbnailWindow.offsetWidth / (firstThumb.offsetWidth + 15)) : 4;
-    }
-
-    function getMaxIndex() {
-        return Math.max(0, totalImages - getVisibleImages());
-    }
-
-    function updateThumbnailCarousel() {
-        index = Math.min(index, getMaxIndex());
-        thumbnailTrack.style.transform = `translateX(-${index * getSlideWidth()}px)`;
-        btnLeft.style.opacity = index <= 0 ? '0.3' : '1';
-        btnRight.style.opacity = index >= getMaxIndex() ? '0.3' : '1';
-    }
-
+if (btnLeft) {
     btnLeft.addEventListener('click', () => {
-        if (index <= 0) return;
-        index--;
+        thumbnailIndex--;
         updateThumbnailCarousel();
+        mulaiAutoSlideDetail();
     });
-
-    btnRight.addEventListener('click', () => {
-        if (index >= getMaxIndex()) return;
-        index++;
-        updateThumbnailCarousel();
-    });
-
-    window.addEventListener('resize', () => {
-        index = 0;
-        updateThumbnailCarousel();
-    });
-
-    updateThumbnailCarousel();
 }
+
+if (btnRight) {
+    btnRight.addEventListener('click', () => {
+        thumbnailIndex++;
+        updateThumbnailCarousel();
+        mulaiAutoSlideDetail();
+    });
+}
+
+window.addEventListener('resize', () => {
+    thumbnailIndex = 0;
+    updateThumbnailCarousel();
+});
 
 /* MOBILE MENU */
 document.addEventListener('DOMContentLoaded', () => {

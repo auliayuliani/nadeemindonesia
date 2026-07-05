@@ -9,6 +9,20 @@ if (window.AOS) {
     });
 }
 
+/* HERO BANNER SLIDER */
+const heroSlides = document.querySelectorAll('.hero-slide');
+let heroSlideIndex = 0;
+
+if (heroSlides.length > 1) {
+    setInterval(() => {
+        heroSlides[heroSlideIndex].classList.remove('active');
+
+        heroSlideIndex = (heroSlideIndex + 1) % heroSlides.length;
+
+        heroSlides[heroSlideIndex].classList.add('active');
+    }, 3000);
+}
+
 /* MOBILE MENU */
 const mobileMenuBtn = document.getElementById('mobileMenu');
 const navLinksList = document.getElementById('navLinks');
