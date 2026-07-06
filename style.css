@@ -1479,7 +1479,7 @@ img {
 
 /* HALAMAN PRODUK */
 .produk-hero {
-    background-image: url('produk.png');
+    background-image: url('produk banner.png');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -1496,14 +1496,19 @@ img {
     padding-left: clamp(24px, 5vw, 80px);;
     padding-right: 20px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .produk-hero-text {
     width: 48%;
     max-width: 960px;
-    margin-left: 0;
+    margin: 200px auto 0;
+    text-align: center;
     background: linear-gradient(
-        to right,
+        to bottom,
         rgba(255, 255, 255, 0) 0%,
         rgba(255, 255, 255, 0.55) 15%,
         rgba(255, 255, 255, 0.82) 55%
