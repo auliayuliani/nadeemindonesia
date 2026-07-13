@@ -274,7 +274,7 @@ function startFAQ() {
     faqChatContainer.style.display = 'flex';
     faqChatBox.innerHTML = '';
 
-    addSystemMsg('Halo, Sobat Nadeem.‹<br>Ada yang bisa kami bantu?<br>Silakan pilih kategori pertanyaan di bawah ini ya.');
+    addSystemMsg('Halo, Sobat Nadeem.<br>Ada yang bisa kami bantu?<br>Silakan pilih kategori pertanyaan di bawah ini ya.');
     showOptions(faqData.categories, handleCategorySelect);
 }
 
