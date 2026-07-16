@@ -148,7 +148,6 @@
                 </a>
             </div>
         </div>
-
         <div class="footer-col col-info" data-aos="fade-up" data-aos-duration="800">
             <h2 class="company-name">Nadeem Indonesia</h2>
             
@@ -171,7 +170,6 @@
                 </a>
             </div>
         </div>
-
         <div class="footer-col col-menu" data-aos="fade-up" data-aos-duration="1000">
             <h3 class="info-title">Menu Utama</h3>
             <ul class="footer-links main-menu-list">
@@ -183,14 +181,41 @@
                 <li><a href="kontak.html">Kontak Kami</a></li>
             </ul>
         </div>
-
     </div>
-    
     <div class="footer-bottom">
         <p>&copy; 2026 Nadeem Indonesia</p>
     </div>
 </footer>
 
-    <script src="script-detail.js"></script>
+
+    <div class="faq-fab" id="faqFab" onclick="toggleFAQ()">
+        <img src="faq icon.png" alt="FAQ Chat">
+    </div>
+
+    <div class="faq-modal" id="faqModal">
+        <div class="faq-header">
+            <div class="faq-back-btn" onclick="toggleFAQ()">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <h2>Frequently Asked Question (FAQ)</h2>
+        </div>
+
+        <div class="faq-splash" id="faqSplash">
+            <img src="logo nadeem.png" alt="Nadeem Logo" class="faq-splash-logo">
+            <button class="btn-mulai" onclick="startFAQ()">Mulai</button>
+        </div>
+
+        <div class="faq-chat-container" id="faqChatContainer" style="display: none;">
+            <div class="faq-chat-box" id="faqChatBox">
+            </div>
+            
+            <div class="faq-footer">
+                <button class="btn-reset" onclick="startFAQ()">Atur Ulang</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
