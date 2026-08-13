@@ -51,7 +51,8 @@
         
         <div class="product-gallery">
             <div class="main-image-box">
-                <img id="main-product-image" src="dzikir pagi petang/0.png" alt="Dzikir Pagi & Petang">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="dzikir pagi petang/0.png"> <source src="dzikir pagi petang/dzikir-pagi-petang-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="dzikir pagi petang/0.png" alt="Dzikir Pagi & Petang" style="display: none;">
             </div>
             
             <div class="thumbnail-row">
@@ -59,12 +60,18 @@
                 
                 <div class="thumbnails-window" id="thumb-window">
                     <div class="thumbnails-track" id="thumb-container">
-                        <img src="dzikir pagi petang/0.png" alt="Dzikir Pagi & Petang 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                        <img src="dzikir pagi petang/1.png" alt="Dzikir Pagi & Petang 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="dzikir pagi petang/2.png" alt="Dzikir Pagi & Petang 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="dzikir pagi petang/3.png" alt="Dzikir Pagi & Petang 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="dzikir pagi petang/4.png" alt="Dzikir Pagi & Petang 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="dzikir pagi petang/5.png" alt="Dzikir Pagi & Petang 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                        <div class="media-thumb video-thumb active" data-type="video" data-src="dzikir pagi petang/dzikir-pagi-petang-video.mp4">
+                            <img src="dzikir pagi petang/0.png" alt="Video Dzikir Pagi & Petang">
+                            <span class="video-play-icon">
+                                <i class="fas fa-play"></i>
+                            </span>
+                        </div>
+                        <img src="dzikir pagi petang/0.png" alt="Dzikir Pagi & Petang 1" class="media-thumb thumb-img" data-type="image">
+                        <img src="dzikir pagi petang/1.png" alt="Dzikir Pagi & Petang 2" class="media-thumb thumb-img" data-type="image">
+                        <img src="dzikir pagi petang/2.png" alt="Dzikir Pagi & Petang 3" class="media-thumb thumb-img" data-type="image">
+                        <img src="dzikir pagi petang/3.png" alt="Dzikir Pagi & Petang 4" class="media-thumb thumb-img" data-type="image">
+                        <img src="dzikir pagi petang/4.png" alt="Dzikir Pagi & Petang 5" class="media-thumb thumb-img" data-type="image">
+                        <img src="dzikir pagi petang/5.png" alt="Dzikir Pagi & Petang 6" class="media-thumb thumb-img" data-type="image">
                     </div> 
                 </div> 
                 <button class="arrow-btn" id="scroll-right">&gt;</button>

@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="umroh & haji gift/0.png" alt="Gift Utama">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="umroh & haji gift/0.png"> <source src="umroh & haji gift/oleh-oleh-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="umroh & haji gift/0.png" alt="Oleh-Oleh Haji & Umrah Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,14 +60,20 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="umroh & haji gift/0.png" alt="Gift 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="umroh & haji gift/1.png" alt="Gift 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="umroh & haji gift/2.png" alt="Gift 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="umroh & haji gift/3.png" alt="Gift 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="umroh & haji gift/4.png" alt="Gift 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="umroh & haji gift/5.png" alt="Gift 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="umroh & haji gift/6.png" alt="Gift 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="umroh & haji gift/7.png" alt="Gift 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="umroh & haji gift/oleh-oleh-video.mp4">
+                        <img src="umroh & haji gift/0.png" alt="Video Oleh-Oleh Haji & Umrah">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="umroh & haji gift/0.png" alt="Gift 1" class="thumb-img active">
+                    <img src="umroh & haji gift/1.png" alt="Gift 2" class="thumb-img">
+                    <img src="umroh & haji gift/2.png" alt="Gift 3" class="thumb-img">
+                    <img src="umroh & haji gift/3.png" alt="Gift 4" class="thumb-img">
+                    <img src="umroh & haji gift/4.png" alt="Gift 5" class="thumb-img">
+                    <img src="umroh & haji gift/5.png" alt="Gift 6" class="thumb-img">
+                    <img src="umroh & haji gift/6.png" alt="Gift 7" class="thumb-img">
+                    <img src="umroh & haji gift/7.png" alt="Gift 8" class="thumb-img">
                 </div>
             </div>
 

@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="ameena hat/0.png" alt="Ameena Bucket Hat">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="ameena hat/0.png"> <source src="ameena hat/ameena-hat-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="ameena hat/0.png" alt="Ameena Bucket Hat" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,13 +60,17 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="ameena hat/0.png" alt="Ameena Bucket Hat 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="ameena hat/1.png" alt="Ameena Bucket Hat 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="ameena hat/2.png" alt="Ameena Bucket Hat 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="ameena hat/3.png" alt="Ameena Bucket Hat 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="ameena hat/4.png" alt="Ameena Bucket Hat 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="ameena hat/5.png" alt="Ameena Bucket Hat 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="ameena hat/6.png" alt="Ameena Bucket Hat 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="ameena hat/ameena-hat-video.mp4"> <img src="ameena hat/0.png" alt="Video Ameena Bucket Hat">
+                    <span class="video-play-icon">
+                        <i class="fas fa-play"></i>
+                    </span>
+                    </div>
+                    <img src="ameena hat/1.png" alt="Ameena Bucket Hat 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="ameena hat/2.png" alt="Ameena Bucket Hat 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="ameena hat/3.png" alt="Ameena Bucket Hat 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="ameena hat/4.png" alt="Ameena Bucket Hat 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="ameena hat/5.png" alt="Ameena Bucket Hat 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="ameena hat/6.png" alt="Ameena Bucket Hat 7" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

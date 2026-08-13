@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="doa dzikir umroh/0.png" alt="Doa Dzikir Umroh">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="doa dzikir umroh/0.png"> <source src="doa dzikir umroh/doa-dzikir-umroh-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="doa dzikir umroh/0.png" alt="Doa Dzikir Umroh" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,11 +60,16 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="doa dzikir umroh/0.png" alt="Doa Dzikir Umroh 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="doa dzikir umroh/1.png" alt="Doa Dzikir Umroh 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="doa dzikir umroh/2.png" alt="Doa Dzikir Umroh 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="doa dzikir umroh/3.png" alt="Doa Dzikir Umroh 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="doa dzikir umroh/4.png" alt="Doa Dzikir Umroh 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="doa dzikir umroh/doa-dzikir-umroh-video.mp4">
+                        <img src="doa dzikir umroh/0.png" alt="Video Doa Dzikir Umroh">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="doa dzikir umroh/1.png" alt="Doa Dzikir Umroh 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="doa dzikir umroh/2.png" alt="Doa Dzikir Umroh 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="doa dzikir umroh/3.png" alt="Doa Dzikir Umroh 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="doa dzikir umroh/4.png" alt="Doa Dzikir Umroh 5" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

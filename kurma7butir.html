@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="kurma 7 butir/0.png" alt="Kurma Sukari 7 Butir">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="kurma 7 butir/0.png"> <source src="kurma 7 butir/kurma-7-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="kurma 7 butir/0.png" alt="Kurma Sukari 7 Butir Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,11 +60,17 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="kurma 7 butir/0.png" alt="Kurma Sukari 7 Butir 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="kurma 7 butir/1.png" alt="Kurma Sukari 7 Butir 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kurma 7 butir/2.png" alt="Kurma Sukari 7 Butir 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kurma 7 butir/3.png" alt="Kurma Sukari 7 Butir 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kurma 7 butir/4.png" alt="Kurma Sukari 7 Butir 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="kurma 7 butir/kurma-7-video.mp4">
+                        <img src="kurma 7 butir/0.png" alt="Video Kurma Sukari 7 Butir">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="kurma 7 butir/0.png" alt="Kurma Sukari 7 Butir 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="kurma 7 butir/1.png" alt="Kurma Sukari 7 Butir 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="kurma 7 butir/2.png" alt="Kurma Sukari 7 Butir 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="kurma 7 butir/3.png" alt="Kurma Sukari 7 Butir 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="kurma 7 butir/4.png" alt="Kurma Sukari 7 Butir 5" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

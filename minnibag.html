@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="minni bag/0.png" alt="Minni Bag Utama">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="minni bag/0.png"> <source src="minni bag/minni-bag-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="minni bag/0.png" alt="Minni Bag Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,18 +60,24 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="minni bag/0.png" alt="Minni Angle 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/1.png" alt="Minni Angle 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/2.png" alt="Minni Angle 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/3.png" alt="Minni Angle 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/4.png" alt="Minni Angle 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/5.png" alt="Minni Angle 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/6.png" alt="Minni Angle 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/7.png" alt="Minni Angle 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/8.png" alt="Minni Angle 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/9.png" alt="Minni Angle 10" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/10.png" alt="Minni Angle 11" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="minni bag/11.png" alt="Minni Angle 12" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="minni bag/minni-bag-video.mp4">
+                        <img src="minni bag/0.png" alt="Video Minni Bag">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="minni bag/0.png" alt="Minni Angle 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="minni bag/1.png" alt="Minni Angle 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/2.png" alt="Minni Angle 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/3.png" alt="Minni Angle 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/4.png" alt="Minni Angle 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/5.png" alt="Minni Angle 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/6.png" alt="Minni Angle 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/7.png" alt="Minni Angle 8" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/8.png" alt="Minni Angle 9" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/9.png" alt="Minni Angle 10" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/10.png" alt="Minni Angle 11" class="media-thumb thumb-img" data-type="image">
+                    <img src="minni bag/11.png" alt="Minni Angle 12" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

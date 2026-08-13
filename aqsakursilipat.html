@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="aqsa kursi lipat/0.png" alt="Aqsa Kursi Lipat">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="aqsa kursi lipat/0.png"> <source src="aqsa kursi lipat/aqsa-kursi-lipat-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="aqsa kursi lipat/0.png" alt="Aqsa Kursi Lipat" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,14 +60,19 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="aqsa kursi lipat/0.png" alt="Aqsa Kursi Lipat 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="aqsa kursi lipat/1.png" alt="Aqsa Kursi Lipat 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="aqsa kursi lipat/2.png" alt="Aqsa Kursi Lipat 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="aqsa kursi lipat/3.png" alt="Aqsa Kursi Lipat 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="aqsa kursi lipat/4.png" alt="Aqsa Kursi Lipat 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="aqsa kursi lipat/5.png" alt="Aqsa Kursi Lipat 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="aqsa kursi lipat/6.png" alt="Aqsa Kursi Lipat 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="aqsa kursi lipat/7.png" alt="Aqsa Kursi Lipat 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="aqsa kursi lipat/aqsa-kursi-lipat-video.mp4"> <img src="aqsa kursi lipat/0.png" alt="Video Aqsa Kursi Lipat">
+                    <span class="video-play-icon">
+                        <i class="fas fa-play"></i>
+                    </span>
+                    </div>
+                    <img src="aqsa kursi lipat/0.png" alt="Aqsa Kursi Lipat 1" class="media-thumb thumb-img" data-type="image">
+                    <img src="aqsa kursi lipat/1.png" alt="Aqsa Kursi Lipat 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="aqsa kursi lipat/2.png" alt="Aqsa Kursi Lipat 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="aqsa kursi lipat/3.png" alt="Aqsa Kursi Lipat 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="aqsa kursi lipat/4.png" alt="Aqsa Kursi Lipat 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="aqsa kursi lipat/5.png" alt="Aqsa Kursi Lipat 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="aqsa kursi lipat/6.png" alt="Aqsa Kursi Lipat 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="aqsa kursi lipat/7.png" alt="Aqsa Kursi Lipat 8" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

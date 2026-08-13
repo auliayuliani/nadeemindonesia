@@ -51,7 +51,8 @@
         
         <div class="product-gallery">
             <div class="main-image-box">
-                <img id="main-product-image" src="doa tuan rumah/0.png" alt="Doa Tuan Rumah">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="doa tuan rumah/0.png"> <source src="doa tuan rumah/doa-tuan-rumah-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="doa tuan rumah/0.png" alt="Doa Tuan Rumah" style="display: none;">
             </div>
             
             <div class="thumbnail-row">
@@ -59,17 +60,26 @@
                 
                 <div class="thumbnails-window" id="thumb-window">
                     <div class="thumbnails-track" id="thumb-container">
-                        <img src="doa tuan rumah/0.png" alt="Doa Tuan Rumah 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/1.png" alt="Doa Tuan Rumah 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/2.png" alt="Doa Tuan Rumah 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/3.png" alt="Doa Tuan Rumah 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/4.png" alt="Doa Tuan Rumah 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/5.png" alt="Doa Tuan Rumah 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/6.png" alt="Doa Tuan Rumah 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/7.png" alt="Doa Tuan Rumah 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="doa tuan rumah/8.png" alt="Doa Tuan Rumah 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    </div> </div> <button class="arrow-btn" id="scroll-right">&gt;</button>
-            </div> </div> <div class="product-info">
+                        <div class="media-thumb video-thumb active" data-type="video" data-src="doa tuan rumah/doa-tuan-rumah-video.mp4">
+                            <img src="doa tuan rumah/0.png" alt="Video Doa Tuan Rumah">
+                            <span class="video-play-icon">
+                                <i class="fas fa-play"></i>
+                            </span>
+                        </div>
+                        <img src="doa tuan rumah/1.png" alt="Doa Tuan Rumah 2" class="media-thumb thumb-img" data-type="image">
+                        <img src="doa tuan rumah/2.png" alt="Doa Tuan Rumah 3" class="media-thumb thumb-img" data-type="image">
+                        <img src="doa tuan rumah/3.png" alt="Doa Tuan Rumah 4" class="media-thumb thumb-img" data-type="image">
+                        <img src="doa tuan rumah/4.png" alt="Doa Tuan Rumah 5" class="media-thumb thumb-img" data-type="image">
+                        <img src="doa tuan rumah/5.png" alt="Doa Tuan Rumah 6" class="media-thumb thumb-img" data-type="image">
+                        <img src="doa tuan rumah/6.png" alt="Doa Tuan Rumah 7" class="media-thumb thumb-img" data-type="image">
+                        <img src="doa tuan rumah/7.png" alt="Doa Tuan Rumah 8" class="media-thumb thumb-img" data-type="image">
+                        <img src="doa tuan rumah/8.png" alt="Doa Tuan Rumah 9" class="media-thumb thumb-img" data-type="image">
+                    </div> 
+                </div> 
+                <button class="arrow-btn" id="scroll-right">&gt;</button>
+            </div> 
+        </div> 
+        <div class="product-info">
             
             <div class="info-group">
                 <h3>Spesifikasi Produk:</h3>

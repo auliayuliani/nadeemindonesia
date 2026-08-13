@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="rafa kursi lipat/0.png" alt="Rafa Kursi Lipat">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="rafa kursi lipat/0.png"> <source src="rafa kursi lipat/rafa-kursi-lipat-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="rafa kursi lipat/0.png" alt="Rafa Kursi Lipat Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,14 +60,20 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="rafa kursi lipat/0.png" alt="Rafa Kursi Lipat 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="rafa kursi lipat/1.png" alt="Rafa Kursi Lipat 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="rafa kursi lipat/2.png" alt="Rafa Kursi Lipat 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="rafa kursi lipat/3.png" alt="Rafa Kursi Lipat 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="rafa kursi lipat/4.png" alt="Rafa Kursi Lipat 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="rafa kursi lipat/5.png" alt="Rafa Kursi Lipat 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="rafa kursi lipat/6.png" alt="Rafa Kursi Lipat 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="rafa kursi lipat/7.png" alt="Rafa Kursi Lipat 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="rafa kursi lipat/rafa-kursi-lipat-video.mp4">
+                        <img src="rafa kursi lipat/0.png" alt="Video Rafa Kursi Lipat">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="rafa kursi lipat/0.png" alt="Rafa Kursi Lipat 1" class="thumb-img active">
+                    <img src="rafa kursi lipat/1.png" alt="Rafa Kursi Lipat 2" class="thumb-img">
+                    <img src="rafa kursi lipat/2.png" alt="Rafa Kursi Lipat 3" class="thumb-img">
+                    <img src="rafa kursi lipat/3.png" alt="Rafa Kursi Lipat 4" class="thumb-img">
+                    <img src="rafa kursi lipat/4.png" alt="Rafa Kursi Lipat 5" class="thumb-img">
+                    <img src="rafa kursi lipat/5.png" alt="Rafa Kursi Lipat 6" class="thumb-img">
+                    <img src="rafa kursi lipat/6.png" alt="Rafa Kursi Lipat 7" class="thumb-img">
+                    <img src="rafa kursi lipat/7.png" alt="Rafa Kursi Lipat 8" class="thumb-img">
                 </div>
             </div>
 

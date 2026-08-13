@@ -51,7 +51,8 @@
         
         <div class="product-gallery">
             <div class="main-image-box">
-                <img id="main-product-image" src="refill flashcard/0.png" alt="Refill Flash Card">
+                <video id="main-product-video" class="main-product-media" controls playsinline poster="refill flashcard/0.png"> <source src="refill flashcard/refill-flashcard-video.mp4" type="video/mp4"></video>
+                <img id="main-product-image" class="main-product-media" src="refill flashcard/0.png" alt="Refill Flash Card" style="display: none;">
             </div>
             
             <div class="thumbnail-row">
@@ -59,14 +60,20 @@
                 
                 <div class="thumbnails-window" id="thumb-window">
                     <div class="thumbnails-track" id="thumb-container">
-                        <img src="refill flashcard/0.png" alt="Refill Flash Card 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                        <img src="refill flashcard/1.png" alt="Refill Flash Card 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="refill flashcard/2.png" alt="Refill Flash Card 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="refill flashcard/3.png" alt="Refill Flash Card 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="refill flashcard/4.png" alt="Refill Flash Card 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="refill flashcard/5.png" alt="Refill Flash Card 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="refill flashcard/6.png" alt="Refill Flash Card 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                        <img src="refill flashcard/7.png" alt="Refill Flash Card 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                        <div class="media-thumb video-thumb active" data-type="video" data-src="refill flashcard/refill-flashcard-video.mp4">
+                            <img src="refill flashcard/0.png" alt="Video Refill Flash Card">
+                            <span class="video-play-icon">
+                                <i class="fas fa-play"></i>
+                            </span>
+                        </div>
+                        <img src="refill flashcard/0.png" alt="Refill Flash Card 1" class="thumb-img active">
+                        <img src="refill flashcard/1.png" alt="Refill Flash Card 2" class="thumb-img">
+                        <img src="refill flashcard/2.png" alt="Refill Flash Card 3" class="thumb-img">
+                        <img src="refill flashcard/3.png" alt="Refill Flash Card 4" class="thumb-img">
+                        <img src="refill flashcard/4.png" alt="Refill Flash Card 5" class="thumb-img">
+                        <img src="refill flashcard/5.png" alt="Refill Flash Card 6" class="thumb-img">
+                        <img src="refill flashcard/6.png" alt="Refill Flash Card 7" class="thumb-img">
+                        <img src="refill flashcard/7.png" alt="Refill Flash Card 8" class="thumb-img">
                     </div> </div> <button class="arrow-btn" id="scroll-right">&gt;</button>
             </div> </div> <div class="product-info">
             

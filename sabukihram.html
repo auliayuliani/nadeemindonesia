@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="sabuk ihram/0.png" alt="Sabuk Kain Ihram">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="sabuk ihram/0.png"> <source src="sabuk ihram/sabuk-ihram-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="sabuk ihram/0.png" alt="Sabuk Kain Ihram Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,15 +60,21 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="sabuk ihram/0.png" alt="Sabuk Kain Ihram 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/1.png" alt="Sabuk Kain Ihram 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/2.png" alt="Sabuk Kain Ihram 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/3.png" alt="Sabuk Kain Ihram 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/4.png" alt="Sabuk Kain Ihram 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/5.png" alt="Sabuk Kain Ihram 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/6.png" alt="Sabuk Kain Ihram 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/7.png" alt="Sabuk Kain Ihram 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="sabuk ihram/8.png" alt="Sabuk Kain Ihram 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="sabuk ihram/sabuk-ihram-video.mp4">
+                        <img src="sabuk ihram/0.png" alt="Video Sabuk Kain Ihram">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="sabuk ihram/0.png" alt="Sabuk Kain Ihram 1" class="thumb-img active">
+                    <img src="sabuk ihram/1.png" alt="Sabuk Kain Ihram 2" class="thumb-img" >
+                    <img src="sabuk ihram/2.png" alt="Sabuk Kain Ihram 3" class="thumb-img" >
+                    <img src="sabuk ihram/3.png" alt="Sabuk Kain Ihram 4" class="thumb-img" >
+                    <img src="sabuk ihram/4.png" alt="Sabuk Kain Ihram 5" class="thumb-img" >
+                    <img src="sabuk ihram/5.png" alt="Sabuk Kain Ihram 6" class="thumb-img" >
+                    <img src="sabuk ihram/6.png" alt="Sabuk Kain Ihram 7" class="thumb-img" >
+                    <img src="sabuk ihram/7.png" alt="Sabuk Kain Ihram 8" class="thumb-img" >
+                    <img src="sabuk ihram/8.png" alt="Sabuk Kain Ihram 9" class="thumb-img" >
                 </div>
             </div>
 

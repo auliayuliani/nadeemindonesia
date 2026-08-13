@@ -41,6 +41,9 @@
     </nav>
 
     <div class="page-title">
+        <a href="produk.html" class="product-back-btn" alt="Kembali ke halaman produk">
+            <i class="fas fa-arrow-left"></i>
+        </a>
         <h1>Lanyard Nadeem</h1>
     </div>
 
@@ -48,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="lanyard/0.png" alt="Lanyard Nadeem">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="lanyard/0.png"> <source src="lanyard/lanyard-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="lanyard/0.png" alt="Lanyard Nadeem Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -56,14 +60,20 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="lanyard/0.png" alt="Lanyard Nadeem 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="lanyard/1.png" alt="Lanyard Nadeem 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="lanyard/2.png" alt="Lanyard Nadeem 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="lanyard/3.png" alt="Lanyard Nadeem 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="lanyard/4.png" alt="Lanyard Nadeem 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="lanyard/5.png" alt="Lanyard Nadeem 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="lanyard/6.png" alt="Lanyard Nadeem 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="lanyard/7.png" alt="Lanyard Nadeem 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="lanyard/lanyard-video.mp4">
+                        <img src="lanyard/0.png" alt="Video Lanyard Nadeem">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="lanyard/0.png" alt="Lanyard Nadeem 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="lanyard/1.png" alt="Lanyard Nadeem 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="lanyard/2.png" alt="Lanyard Nadeem 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="lanyard/3.png" alt="Lanyard Nadeem 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="lanyard/4.png" alt="Lanyard Nadeem 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="lanyard/5.png" alt="Lanyard Nadeem 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="lanyard/6.png" alt="Lanyard Nadeem 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="lanyard/7.png" alt="Lanyard Nadeem 8" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

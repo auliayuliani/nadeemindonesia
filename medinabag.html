@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="medina bag/0.png" alt="Medina Bag Utama">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="medina bag/0.png"> <source src="medina bag/medina-bag-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="medina bag/0.png" alt="Medina Bag Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,17 +60,23 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="medina bag/0.png" alt="Medina Bag 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/1.png" alt="Medina Bag 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/2.png" alt="Medina Bag 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/3.png" alt="Medina Bag 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/4.png" alt="Medina Bag 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/5.png" alt="Medina Bag 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/6.png" alt="Medina Bag 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/7.png" alt="Medina Bag 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/8.png" alt="Medina Bag 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/9.png" alt="Medina Bag 10" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="medina bag/10.png" alt="Medina Bag 11" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="medina bag/medina-bag-video.mp4">
+                        <img src="medina bag/0.png" alt="Video Medina Bag">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="medina bag/0.png" alt="Medina Bag 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="medina bag/1.png" alt="Medina Bag 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/2.png" alt="Medina Bag 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/3.png" alt="Medina Bag 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/4.png" alt="Medina Bag 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/5.png" alt="Medina Bag 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/6.png" alt="Medina Bag 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/7.png" alt="Medina Bag 8" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/8.png" alt="Medina Bag 9" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/9.png" alt="Medina Bag 10" class="media-thumb thumb-img" data-type="image">
+                    <img src="medina bag/10.png" alt="Medina Bag 11" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="athaya hat/0.png" alt="Athaya Bucket Hat">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="athaya hat/0.png"> <source src="athaya hat/athaya-hat-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="athaya hat/0.png" alt="Athaya Bucket Hat" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,13 +60,18 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="athaya hat/0.png" alt="Athaya Bucket Hat 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="athaya hat/1.png" alt="Athaya Bucket Hat 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="athaya hat/2.png" alt="Athaya Bucket Hat 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="athaya hat/3.png" alt="Athaya Bucket Hat 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="athaya hat/4.png" alt="Athaya Bucket Hat 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="athaya hat/5.png" alt="Athaya Bucket Hat 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="athaya hat/6.png" alt="Athaya Bucket Hat 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="athaya hat/athaya-hat-video.mp4">
+                        <img src="athaya hat/0.png" alt="Video Athaya Bucket Hat">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="athaya hat/1.png" alt="Athaya Bucket Hat 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="athaya hat/2.png" alt="Athaya Bucket Hat 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="athaya hat/3.png" alt="Athaya Bucket Hat 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="athaya hat/4.png" alt="Athaya Bucket Hat 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="athaya hat/5.png" alt="Athaya Bucket Hat 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="athaya hat/6.png" alt="Athaya Bucket Hat 7" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

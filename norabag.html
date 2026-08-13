@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="nora bag/0.png" alt="Nora Bag Utama">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="nora bag/0.png"> <source src="nora bag/nora-bag-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="nora bag/0.png" alt="Nora Bag Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,19 +60,24 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="nora bag/0.png" alt="Nora Angle 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/1.png" alt="Nora Angle 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/2.png" alt="Nora Angle 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/3.png" alt="Nora Angle 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/4.png" alt="Nora Angle 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/5.png" alt="Nora Angle 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/6.png" alt="Nora Angle 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/7.png" alt="Nora Angle 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/8.png" alt="Nora Angle 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/9.png" alt="Nora Angle 10" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/10.png" alt="Nora Angle 11" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/11.png" alt="Nora Angle 12" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="nora bag/12.png" alt="Nora Angle 13" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="nora bag/nora-bag-video.mp4">
+                        <img src="nora bag/0.png" alt="Video Nora Bag">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="nora bag/0.png" alt="Nora Angle 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="nora bag/1.png" alt="Nora Angle 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/2.png" alt="Nora Angle 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/3.png" alt="Nora Angle 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/4.png" alt="Nora Angle 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/5.png" alt="Nora Angle 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/6.png" alt="Nora Angle 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/7.png" alt="Nora Angle 8" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/8.png" alt="Nora Angle 9" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/9.png" alt="Nora Angle 10" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/10.png" alt="Nora Angle 11" class="media-thumb thumb-img" data-type="image">
+                    <img src="nora bag/11.png" alt="Nora Angle 12" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

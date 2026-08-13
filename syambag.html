@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="syam bag/0.png" alt="Syam Bag Utama">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="syam bag/0.png"> <source src="syam bag/syam-bag-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="syam bag/0.png" alt="Syam Bag Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,14 +60,20 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="syam bag/0.png" alt="Syam Bag 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="syam bag/1.png" alt="Syam Bag 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="syam bag/2.png" alt="Syam Bag 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="syam bag/3.png" alt="Syam Bag 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="syam bag/4.png" alt="Syam Bag 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="syam bag/5.png" alt="Syam Bag 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="syam bag/6.png" alt="Syam Bag 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="syam bag/7.png" alt="Syam Bag 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="syam bag/syam-bag-video.mp4">
+                        <img src="syam bag/0.png" alt="Video Syam Bag">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="syam bag/0.png" alt="Syam Bag 1" class="media-thumb thumb-img" data-type="image">
+                    <img src="syam bag/1.png" alt="Syam Bag 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="syam bag/2.png" alt="Syam Bag 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="syam bag/3.png" alt="Syam Bag 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="syam bag/4.png" alt="Syam Bag 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="syam bag/5.png" alt="Syam Bag 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="syam bag/6.png" alt="Syam Bag 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="syam bag/7.png" alt="Syam Bag 8" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="armuzna alas lipat/0.png" alt="Armuzna Alas Lipat">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="armuzna alas lipat/0.png"> <source src="armuzna alas lipat/armuzna-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="armuzna alas lipat/0.png" alt="Armuzna Alas Lipat" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,14 +60,18 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="armuzna alas lipat/0.png" alt="Armuzna Alas Lipat 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="armuzna alas lipat/1.png" alt="Armuzna Alas Lipat 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="armuzna alas lipat/2.png" alt="Armuzna Alas Lipat 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="armuzna alas lipat/3.png" alt="Armuzna Alas Lipat 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="armuzna alas lipat/4.png" alt="Armuzna Alas Lipat 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="armuzna alas lipat/5.png" alt="Armuzna Alas Lipat 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="armuzna alas lipat/6.png" alt="Armuzna Alas Lipat 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="armuzna alas lipat/7.png" alt="Armuzna Alas Lipat 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="armuzna alas lipat/armuzna-video.mp4"> <img src="armuzna alas lipat/0.png" alt="Video Armuzna Alas Lipat">
+                    <span class="video-play-icon">
+                        <i class="fas fa-play"></i>
+                    </span>
+                    </div>
+                    <img src="armuzna alas lipat/1.png" alt="Armuzna Alas Lipat 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="armuzna alas lipat/2.png" alt="Armuzna Alas Lipat 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="armuzna alas lipat/3.png" alt="Armuzna Alas Lipat 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="armuzna alas lipat/4.png" alt="Armuzna Alas Lipat 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="armuzna alas lipat/5.png" alt="Armuzna Alas Lipat 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="armuzna alas lipat/6.png" alt="Armuzna Alas Lipat 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="armuzna alas lipat/7.png" alt="Armuzna Alas Lipat 8" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

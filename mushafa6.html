@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="mushaf a6/0.png" alt="Mushaf A6">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="mushaf a6/0.png"> <source src="mushaf a6/mushaf-a6-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="mushaf a6/0.png" alt="Mushaf A6 Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,16 +60,22 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="mushaf a6/0.png" alt="Mushaf A6 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/1.png" alt="Mushaf A6 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/2.png" alt="Mushaf A6 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/3.png" alt="Mushaf A6 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/4.png" alt="Mushaf A6 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/5.png" alt="Mushaf A6 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/6.png" alt="Mushaf A6 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/7.png" alt="Mushaf A6 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/8.png" alt="Mushaf A6 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="mushaf a6/9.png" alt="Mushaf A6 10" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="mushaf a6/mushaf-a6-video.mp4">
+                        <img src="mushaf a6/0.png" alt="Video Mushaf A6">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="mushaf a6/0.png" alt="Mushaf A6 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="mushaf a6/1.png" alt="Mushaf A6 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/2.png" alt="Mushaf A6 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/3.png" alt="Mushaf A6 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/4.png" alt="Mushaf A6 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/5.png" alt="Mushaf A6 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/6.png" alt="Mushaf A6 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/7.png" alt="Mushaf A6 8" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/8.png" alt="Mushaf A6 9" class="media-thumb thumb-img" data-type="image">
+                    <img src="mushaf a6/9.png" alt="Mushaf A6 10" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

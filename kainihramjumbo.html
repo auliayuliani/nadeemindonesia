@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="kain ihram jumbo/0.png" alt="Kain Ihram Jumbo">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="kain ihram jumbo/0.png"> <source src="kain ihram jumbo/ihram-jumbo-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="kain ihram jumbo/0.png" alt="Kain Ihram Jumbo Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,13 +60,19 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="kain ihram jumbo/0.png" alt="Kain Ihram Jumbo 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram jumbo/1.png" alt="Kain Ihram Jumbo 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram jumbo/2.png" alt="Kain Ihram Jumbo 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram jumbo/3.png" alt="Kain Ihram Jumbo 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram jumbo/4.png" alt="Kain Ihram Jumbo 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram jumbo/5.png" alt="Kain Ihram Jumbo 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram jumbo/6.png" alt="Kain Ihram Jumbo 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="kain ihram jumbo/ihram-jumbo-video.mp4">
+                        <img src="kain ihram jumbo/0.png" alt="Video Kain Ihram Jumbo">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="kain ihram jumbo/0.png" alt="Kain Ihram Jumbo 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="kain ihram jumbo/1.png" alt="Kain Ihram Jumbo 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram jumbo/2.png" alt="Kain Ihram Jumbo 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram jumbo/3.png" alt="Kain Ihram Jumbo 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram jumbo/4.png" alt="Kain Ihram Jumbo 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram jumbo/5.png" alt="Kain Ihram Jumbo 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram jumbo/6.png" alt="Kain Ihram Jumbo 7" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

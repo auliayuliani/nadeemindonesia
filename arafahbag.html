@@ -28,10 +28,10 @@
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
 
-            <div class="social-icons">
-                <a href="https://www.instagram.com/nadeemindonesia?igsh=MXZ3MnM5dGdvdXBmcw=="><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@nadeemindonesia?_r=1&_t=ZS-95t69F7vtg4"><i class="fab fa-tiktok"></i></a>
-                <a href="https://youtube.com/@nadeemindonesia?si=iWXVPKEujbaK8mrb"><i class="fab fa-youtube"></i></a>
+            <div class="navbar-social-icons">
+                <a href="https://www.instagram.com/nadeemindonesia?igsh=MXZ3MnM5dGdvdXBmcw=="  target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@nadeemindonesia?_r=1&_t=ZS-95t69F7vtg4" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@nadeemindonesia?si=iWXVPKEujbaK8mrb" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
 
             <div class="mobile-menu" id="mobileMenu">
@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="arafah bag/0.png" alt="Arafah Bag Utama">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="arafah bag/0.png"> <source src="arafah bag/arafah-bag-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="arafah bag/0.png" alt="Arafah Bag" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,15 +60,20 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="arafah bag/0.png" alt="Arafah Bag 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/1.png" alt="Arafah Bag 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/2.png" alt="Arafah Bag 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/3.png" alt="Arafah Bag 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/4.png" alt="Arafah Bag 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/5.png" alt="Arafah Bag 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/6.png" alt="Arafah Bag 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/7.png" alt="Arafah Bag 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="arafah bag/8.png" alt="Arafah Bag 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="arafah bag/arafah-bag-video.mp4"> <img src="arafah bag/0.png" alt="Video Arafah Bag">
+                    <span class="video-play-icon">
+                        <i class="fas fa-play"></i>
+                    </span>
+                    </div>
+                    <img src="arafah bag/0.png" alt="Arafah Bag 1" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/1.png" alt="Arafah Bag 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/2.png" alt="Arafah Bag 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/3.png" alt="Arafah Bag 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/4.png" alt="Arafah Bag 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/5.png" alt="Arafah Bag 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/6.png" alt="Arafah Bag 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/7.png" alt="Arafah Bag 8" class="media-thumb thumb-img" data-type="image">
+                    <img src="arafah bag/8.png" alt="Arafah Bag 9" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

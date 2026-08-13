@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="dzikir tawaf/0.png" alt="Dzikir Tawaf">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="dzikir tawaf/0.png"> <source src="dzikir tawaf/dzikir-tawaf-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="dzikir tawaf/0.png" alt="Dzikir Tawaf" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,16 +60,22 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="dzikir tawaf/0.png" alt="Dzikir Tawaf 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/1.png" alt="Dzikir Tawaf 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/2.png" alt="Dzikir Tawaf 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/3.png" alt="Dzikir Tawaf 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/4.png" alt="Dzikir Tawaf 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/5.png" alt="Dzikir Tawaf 6" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/6.png" alt="Dzikir Tawaf 7" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/7.png" alt="Dzikir Tawaf 8" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/8.png" alt="Dzikir Tawaf 9" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="dzikir tawaf/9.png" alt="Dzikir Tawaf 10" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="dzikir tawaf/dzikir-tawaf-video.mp4">
+                        <img src="dzikir tawaf/0.png" alt="Video Dzikir Tawaf">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="dzikir tawaf/0.png" alt="Dzikir Tawaf 1" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/1.png" alt="Dzikir Tawaf 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/2.png" alt="Dzikir Tawaf 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/3.png" alt="Dzikir Tawaf 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/4.png" alt="Dzikir Tawaf 5" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/5.png" alt="Dzikir Tawaf 6" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/6.png" alt="Dzikir Tawaf 7" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/7.png" alt="Dzikir Tawaf 8" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/8.png" alt="Dzikir Tawaf 9" class="media-thumb thumb-img" data-type="image">
+                    <img src="dzikir tawaf/9.png" alt="Dzikir Tawaf 10" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="taqi bag/0.png" alt="Taqi Bag Utama">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="taqi bag/0.png"> <source src="taqi bag/taqi-bag-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="taqi bag/0.png" alt="Taqi Bag Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,6 +60,12 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="taqi bag/taqi-bag-video.mp4">
+                        <img src="taqi bag/0.png" alt="Video Taqi Bag">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
                     <img src="taqi bag/0.png" alt="Taqi Angle 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
                     <img src="taqi bag/1.png" alt="Taqi Angle 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
                     <img src="taqi bag/2.png" alt="Taqi Angle 3" class="thumb-img" onclick="gantiGambar(this.src, this)">

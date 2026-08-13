@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="kain ihram/0.png" alt="Kain Ihram">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="kain ihram/0.png"> <source src="kain ihram/ihram-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="kain ihram/0.png" alt="Kain Ihram Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,11 +60,17 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="kain ihram/0.png" alt="Kain Ihram 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram/1.png" alt="Kain Ihram 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram/2.png" alt="Kain Ihram 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram/3.png" alt="Kain Ihram 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
-                    <img src="kain ihram/4.png" alt="Kain Ihram 5" class="thumb-img" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="kain ihram/ihram-video.mp4">
+                        <img src="kain ihram/0.png" alt="Video Kain Ihram">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="kain ihram/0.png" alt="Kain Ihram 1" class="media-thumb thumb-img active" data-type="image">
+                    <img src="kain ihram/1.png" alt="Kain Ihram 2" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram/2.png" alt="Kain Ihram 3" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram/3.png" alt="Kain Ihram 4" class="media-thumb thumb-img" data-type="image">
+                    <img src="kain ihram/4.png" alt="Kain Ihram 5" class="media-thumb thumb-img" data-type="image">
                 </div>
             </div>
 

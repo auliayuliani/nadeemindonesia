@@ -51,7 +51,8 @@
         
     <div class="product-gallery">
         <div class="main-image-box">
-            <img id="main-product-image" src="pouch jumrah/0.png" alt="Pouch Jumrah">
+            <video id="main-product-video" class="main-product-media" controls playsinline poster="pouch jumrah/0.png"> <source src="pouch jumrah/pouch-jumrah-video.mp4" type="video/mp4"></video>
+            <img id="main-product-image" class="main-product-media" src="pouch jumrah/0.png" alt="Pouch Jumrah Utama" style="display: none;">
         </div>
         
         <div class="thumbnail-row">
@@ -59,7 +60,13 @@
             
             <div class="thumbnails-window" id="thumb-window">
                 <div class="thumbnails-track" id="thumb-container">
-                    <img src="pouch jumrah/0.png" alt="Pouch Jumrah 1" class="thumb-img active" onclick="gantiGambar(this.src, this)">
+                    <div class="media-thumb video-thumb active" data-type="video" data-src="pouch jumrah/pouch-jumrah-video.mp4">
+                        <img src="pouch jumrah/0.png" alt="Video Pouch Jumrah">
+                        <span class="video-play-icon">
+                            <i class="fas fa-play"></i>
+                        </span>
+                    </div>
+                    <img src="pouch jumrah/0.png" alt="Pouch Jumrah 1" class="thumb-img" onclick="gantiGambar(this.src, this)">
                     <img src="pouch jumrah/1.png" alt="Pouch Jumrah 2" class="thumb-img" onclick="gantiGambar(this.src, this)">
                     <img src="pouch jumrah/2.png" alt="Pouch Jumrah 3" class="thumb-img" onclick="gantiGambar(this.src, this)">
                     <img src="pouch jumrah/3.png" alt="Pouch Jumrah 4" class="thumb-img" onclick="gantiGambar(this.src, this)">
